@@ -1,0 +1,4 @@
+[17-Jan-2017 15:09:00 Europe/Berlin] PHP Notice:  Undefined index: user_name in C:\xampp\htdocs\DISII\templates_c\9df025c6a904fc34be371dc1ff3db0261f016bc6_0.file.left_bar.tpl.php on line 36
+[17-Jan-2017 15:09:00 Europe/Berlin] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\DISII\templates_c\9df025c6a904fc34be371dc1ff3db0261f016bc6_0.file.left_bar.tpl.php on line 36
+[17-Jan-2017 15:09:00 Europe/Berlin] PHP Notice:  Undefined index: user_mail in C:\xampp\htdocs\DISII\templates_c\9df025c6a904fc34be371dc1ff3db0261f016bc6_0.file.left_bar.tpl.php on line 38
+[17-Jan-2017 15:09:00 Europe/Berlin] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\DISII\templates_c\9df025c6a904fc34be371dc1ff3db0261f016bc6_0.file.left_bar.tpl.php on line 38
