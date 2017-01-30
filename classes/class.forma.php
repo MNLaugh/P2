@@ -10,7 +10,7 @@
         /**
          * Function qui retourne un tableau des formation
          *
-         * @return Array 		-Tableau des plugins (HTML/CSS/JS)
+         * @return Array 		-Tableau des formations
          */
     	private function get_list_formation(){
 		 	try {

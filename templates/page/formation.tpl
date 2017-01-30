@@ -4,7 +4,7 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                EXPORTABLE TABLE
+                                FORMATIONS
                             </h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
@@ -46,7 +46,7 @@
                                         <th>Options</th>
                                     </tr>
                                 </tfoot>
-                                <tbody>
+                                <tbody id="deux">
                         {section name=key loop=$allFormation}
                             <tr>
                                 <td>{$allFormation[key]['NSFORM']}</td>
@@ -65,3 +65,39 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+            <!-- Input -->
+            <div class="row clearfix"> <!-- 2 3 5 -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                               FORMATION
+                                <small>Ajout</small>
+                            </h2>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Acronyme de la formation" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Nom long de la formation" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Input -->

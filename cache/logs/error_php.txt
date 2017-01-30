@@ -172,3 +172,4 @@ Stack trace:
 [25-Jan-2017 16:44:32 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378
 [26-Jan-2017 17:25:14 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378
 [26-Jan-2017 18:45:20 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378
+[30-Jan-2017 15:04:45 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378

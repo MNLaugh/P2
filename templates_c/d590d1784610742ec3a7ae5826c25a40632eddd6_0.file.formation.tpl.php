@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-25 14:54:09
+/* Smarty version 3.1.30, created on 2017-01-30 16:52:07
   from "C:\xampp\htdocs\DISII\templates\page\formation.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_5888ae0101ff69_21311283',
+  'unifunc' => 'content_588f6127303d46_26085096',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd590d1784610742ec3a7ae5826c25a40632eddd6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\DISII\\templates\\page\\formation.tpl',
-      1 => 1485352118,
+      1 => 1485791525,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5888ae0101ff69_21311283 (Smarty_Internal_Template $_smarty_tpl) {
+function content_588f6127303d46_26085096 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
             <!-- Exportable Table -->
             <div class="row clearfix">
@@ -28,7 +28,7 @@ function content_5888ae0101ff69_21311283 (Smarty_Internal_Template $_smarty_tpl)
                     <div class="card">
                         <div class="header">
                             <h2>
-                                EXPORTABLE TABLE
+                                FORMATIONS
                             </h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
@@ -70,7 +70,7 @@ function content_5888ae0101ff69_21311283 (Smarty_Internal_Template $_smarty_tpl)
                                         <th>Options</th>
                                     </tr>
                                 </tfoot>
-                                <tbody>
+                                <tbody id="deux">
                         <?php
 $__section_key_0_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_key']) ? $_smarty_tpl->tpl_vars['__smarty_section_key'] : false;
 $__section_key_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['allFormation']->value) ? count($_loop) : max(0, (int) $_loop));
@@ -109,5 +109,40 @@ $_smarty_tpl->tpl_vars['__smarty_section_key'] = $__section_key_0_saved;
                     </div>
                 </div>
             </div>
-<?php }
+
+
+
+
+            <!-- Input -->
+            <div class="row clearfix"> <!-- 2 3 5 -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="card">
+                        <div class="header">
+                            <h2>
+                               FORMATION
+                                <small>Ajout</small>
+                            </h2>
+                        </div>
+                        <div class="body">
+                            <div class="row clearfix">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Acronyme de la formation" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" placeholder="Nom long de la formation" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- #END# Input --><?php }
 }
