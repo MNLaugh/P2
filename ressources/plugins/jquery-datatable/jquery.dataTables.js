@@ -11317,7 +11317,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sNext": "Next",
+				"sNext": "Suivant",
 	
 	
 				/**
@@ -11340,7 +11340,7 @@
 				 *      } );
 				 *    } );
 				 */
-				"sPrevious": "Previous"
+				"sPrevious": "Précédent"
 			},
 	
 			/**

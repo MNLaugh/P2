@@ -5,6 +5,9 @@
 
     <section class="content">
         <div class="container-fluid">
+        	<div class="block-header">
+        		{$arianna}
+            </div>
             {* inclusion d'un template $variable - eg $module = 'contacts' *}
             {include file="$page.tpl"}
         </div>

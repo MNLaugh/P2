@@ -1,3 +1,6 @@
+<div class="row clearfix">
+
+
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="card">
         <div class="header">
@@ -290,6 +293,7 @@
             </p>
         </div>
     </div>
+</div>
 </div>
             <!-- Multi Select
             <div class="row clearfix">

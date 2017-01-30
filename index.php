@@ -12,15 +12,11 @@ ini_set('error_log', 'cache/logs/error_php.txt');
 require_once('configs/func.php'); //Fonctions
 require_once('configs/const.php'); //Constantes
 
-/*****  -Classes-  *****\*/
-require_once('./classes/class.user.php');
-
 require 'smarties/libs/Smarty.class.php';
 $smarty = new Smarty;
 //Active le debugger
 //$smarty->debugging = false;
-
-/***** -A activer en prod- *****\
+/***************  -A activer en prod-  ***************\
 //Active la compilation
 $smarty->force_compile = false;
 //Active la mise en cache
@@ -29,18 +25,31 @@ $smarty->caching = false;
 $smarty->cache_lifetime = 120;
 */
 
-/*****  -Contrôle de session-  *****\*/
+
+/***************  -Contrôle de session-  ***************\*/
+require_once('./classes/class.user.php'); //Inclusion de la class utilisateur
 $user = new User($db);	//Initialise la class User
+$smarty->assign("loggedin", false); //Etat de la session par defaut "false"
+$noty[] = simply_notif('danger', NOTCO, 'right');
+$power = 2;
 
-$smarty->assign("loggedin", false);
 
-/*****  -Contrôle de menu-  *****\*/
-//Transfert des données du menu
-$smarty->assign("menu", $menu_list);
+/***************  -Contrôle de menu-  ***************\*/
+require_once('./classes/class.menu.php'); //Inclusion de la class menu
+//Initialisation de l'objets Menu
+$menuQuery = new Menu;
+//Transfert de la vue Menu HTML au template
+$smarty->assign("left_menu", $menuQuery->html_menu($power));
 //Initialisation de la page par requête GET
 $page = (isset($_GET['p'])) ? $_GET['p'] : "accueil";
+//Transfert de la vue file d'arianne au template
+$smarty->assign("arianna", $menuQuery->html_arianna($page));
 //Transfert de la page à la vue
 $smarty->assign("page", "templates/page/".$page);
+
+
+
+
 
 //perm au max (3)
 $smarty->assign("perm", 2);
@@ -49,11 +58,16 @@ if(substr_count($page, 'docs')==true){
 }
 switch ($page) {
 	case 'docs':
-		require_once('./classes/class.docs.php');
-		$docs = new Docs;
-		$smarty->assign("modulesList", $docs->module_list());
-		break;
-	
+		require_once('./classes/class.docs.php'); //Inclusion de la class documentation
+		$docsQuery = new Docs;
+		$modulesList = $docsQuery->module_list();
+		$smarty->assign("modulesList", $modulesList);
+	break;
+	case 'formation':
+		require_once('./classes/class.forma.php'); //Inclusion de la class formation
+		$formaQuery = new Formations($db);
+		$smarty->assign("allFormation", $formaQuery->get_arr_formation());
+	break;
 	default:
 		# code...
 		break;
@@ -82,11 +96,16 @@ $smarty->display('index.tpl');
 /**
  * @param String $noty["type"] 		-Type: "danger, success, warning, info"
  * @param String $noty["text"] 		-Message de la notifications
+ * @param String $noty["hP"] 		-Placement Horizontale "left", "" (Defaut "center"), "right".
  *	Exemple-  
- *		$noty[] = simply_notif("warning", NOTCO);
+ *		//Type: "warning" (Background-color: orange)
+ *		//Texte: Constante "NOTCO" (Voir fichier: ./configs/func.php)
+ *		//Placement Horizontale: "" (Vide) Par defaut: "center"
+ *		$noty[] = simply_notif("warning", NOTCO, "");
  *
  * $noty[] = array("type" => "mon_type", "text" => "mon_message"); //V1
  * $noty[] = simply_notif($type, $texte); //V2 (voir fichier: ./configs/func.php)
+ * $noty[] = simply_notif($type, $texte, $placementHorizontal); //V3 (voir fichier: ./configs/func.php)
 **/
 //Si il existe une notification on l'affiche
 echo (isset($noty)) ? "<script type=\"text/javascript\">view_notif(".json_encode($noty).");</script>" : false;

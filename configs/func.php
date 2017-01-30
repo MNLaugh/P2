@@ -17,7 +17,7 @@
  *
  * @return Array   		-Information de sortie
  **/
-function simply_notif($type, $texte){
-	return array("type" => $type, "text" => $texte);
+function simply_notif($type, $texte, $horizontalPlacement){
+	return array("type" => $type, "text" => $texte, "hP" => $horizontalPlacement);
 }
 ?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-17 11:30:59
+/* Smarty version 3.1.30, created on 2017-01-25 10:23:08
   from "C:\xampp\htdocs\DISII\templates\page\accueil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_587df263021fb5_49985661',
+  'unifunc' => 'content_58886e7c5ccdf4_29827110',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c187345b60056b47ad63ed7385f09d36265f9dc2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\DISII\\templates\\page\\accueil.tpl',
-      1 => 1484426860,
+      1 => 1485213700,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_587df263021fb5_49985661 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58886e7c5ccdf4_29827110 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_capitalize')) require_once 'C:\\xampp\\htdocs\\DISII\\smarties\\libs\\plugins\\modifier.capitalize.php';
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\xampp\\htdocs\\DISII\\smarties\\libs\\plugins\\modifier.date_format.php';
 if (!is_callable('smarty_function_html_select_date')) require_once 'C:\\xampp\\htdocs\\DISII\\smarties\\libs\\plugins\\function.html_select_date.php';
 if (!is_callable('smarty_function_html_select_time')) require_once 'C:\\xampp\\htdocs\\DISII\\smarties\\libs\\plugins\\function.html_select_time.php';
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdocs\\DISII\\smarties\\libs\\plugins\\function.html_options.php';
 ?>
+<div class="row clearfix">
+
+
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="card">
         <div class="header">
@@ -87,13 +90,13 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\xampp\\htdoc
                     </thead>
                     <tbody>
                         <?php
-$__section_outer_2_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_outer']) ? $_smarty_tpl->tpl_vars['__smarty_section_outer'] : false;
-$__section_outer_2_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['FirstName']->value) ? count($_loop) : max(0, (int) $_loop));
-$__section_outer_2_total = $__section_outer_2_loop;
+$__section_outer_0_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_outer']) ? $_smarty_tpl->tpl_vars['__smarty_section_outer'] : false;
+$__section_outer_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['FirstName']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_outer_0_total = $__section_outer_0_loop;
 $_smarty_tpl->tpl_vars['__smarty_section_outer'] = new Smarty_Variable(array());
-if ($__section_outer_2_total != 0) {
-for ($__section_outer_2_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index'] = 0; $__section_outer_2_iteration <= $__section_outer_2_total; $__section_outer_2_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index']++){
-$_smarty_tpl->tpl_vars['__smarty_section_outer']->value['rownum'] = $__section_outer_2_iteration;
+if ($__section_outer_0_total != 0) {
+for ($__section_outer_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index'] = 0; $__section_outer_0_iteration <= $__section_outer_0_total; $__section_outer_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index']++){
+$_smarty_tpl->tpl_vars['__smarty_section_outer']->value['rownum'] = $__section_outer_0_iteration;
 ?>
                             <tr>
                                 <?php if ((1 & (isset($_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index'] : null) / 2)) {?>
@@ -119,8 +122,8 @@ $_smarty_tpl->tpl_vars['__smarty_section_outer']->value['rownum'] = $__section_o
                             </tr>
                         <?php
 }
-if ($__section_outer_2_saved) {
-$_smarty_tpl->tpl_vars['__smarty_section_outer'] = $__section_outer_2_saved;
+if ($__section_outer_0_saved) {
+$_smarty_tpl->tpl_vars['__smarty_section_outer'] = $__section_outer_0_saved;
 }
 ?>
                     </tbody>
@@ -149,13 +152,13 @@ $_smarty_tpl->tpl_vars['__smarty_section_outer'] = $__section_outer_2_saved;
                     </thead>
                     <tbody>
                         <?php
-$__section_outer_3_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_outer']) ? $_smarty_tpl->tpl_vars['__smarty_section_outer'] : false;
-$__section_outer_3_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['menu']->value['menu_nom']) ? count($_loop) : max(0, (int) $_loop));
-$__section_outer_3_total = $__section_outer_3_loop;
+$__section_outer_1_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_outer']) ? $_smarty_tpl->tpl_vars['__smarty_section_outer'] : false;
+$__section_outer_1_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['menu']->value['menu_nom']) ? count($_loop) : max(0, (int) $_loop));
+$__section_outer_1_total = $__section_outer_1_loop;
 $_smarty_tpl->tpl_vars['__smarty_section_outer'] = new Smarty_Variable(array());
-if ($__section_outer_3_total != 0) {
-for ($__section_outer_3_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index'] = 0; $__section_outer_3_iteration <= $__section_outer_3_total; $__section_outer_3_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index']++){
-$_smarty_tpl->tpl_vars['__smarty_section_outer']->value['rownum'] = $__section_outer_3_iteration;
+if ($__section_outer_1_total != 0) {
+for ($__section_outer_1_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index'] = 0; $__section_outer_1_iteration <= $__section_outer_1_total; $__section_outer_1_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index']++){
+$_smarty_tpl->tpl_vars['__smarty_section_outer']->value['rownum'] = $__section_outer_1_iteration;
 ?>
                         <?php if (is_array($_smarty_tpl->tpl_vars['menu']->value['menu_link'][(isset($_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index'] : null)])) {?>
 
@@ -169,12 +172,12 @@ $_smarty_tpl->tpl_vars['__smarty_section_outer']->value['rownum'] = $__section_o
                             <?php $_smarty_tpl->_assignInScope('smenu', $_smarty_tpl->tpl_vars['menu']->value['menu_link'][(isset($_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_outer']->value['index'] : null)]);
 ?>
                             <?php
-$__section_i_4_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_i']) ? $_smarty_tpl->tpl_vars['__smarty_section_i'] : false;
-$__section_i_4_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['smenu']->value['smenu_nom']) ? count($_loop) : max(0, (int) $_loop));
-$__section_i_4_total = $__section_i_4_loop;
+$__section_i_2_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_i']) ? $_smarty_tpl->tpl_vars['__smarty_section_i'] : false;
+$__section_i_2_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['smenu']->value['smenu_nom']) ? count($_loop) : max(0, (int) $_loop));
+$__section_i_2_total = $__section_i_2_loop;
 $_smarty_tpl->tpl_vars['__smarty_section_i'] = new Smarty_Variable(array());
-if ($__section_i_4_total != 0) {
-for ($__section_i_4_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = 0; $__section_i_4_iteration <= $__section_i_4_total; $__section_i_4_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
+if ($__section_i_2_total != 0) {
+for ($__section_i_2_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] = 0; $__section_i_2_iteration <= $__section_i_2_total; $__section_i_2_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']++){
 ?>
                             <li>
                                 <a href="<?php echo $_smarty_tpl->tpl_vars['smenu']->value['smenu_link'][(isset($_smarty_tpl->tpl_vars['__smarty_section_i']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_i']->value['index'] : null)];?>
@@ -187,8 +190,8 @@ for ($__section_i_4_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_i']-
                             <?php
 }
 }
-if ($__section_i_4_saved) {
-$_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_4_saved;
+if ($__section_i_2_saved) {
+$_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_2_saved;
 }
 ?>
                         </ul>
@@ -214,8 +217,8 @@ $_smarty_tpl->tpl_vars['__smarty_section_i'] = $__section_i_4_saved;
                         <?php
 }
 }
-if ($__section_outer_3_saved) {
-$_smarty_tpl->tpl_vars['__smarty_section_outer'] = $__section_outer_3_saved;
+if ($__section_outer_1_saved) {
+$_smarty_tpl->tpl_vars['__smarty_section_outer'] = $__section_outer_1_saved;
 }
 ?>
                     </tbody>
@@ -310,12 +313,12 @@ $_smarty_tpl->tpl_vars['__smarty_section_outer'] = $__section_outer_3_saved;
                             </thead>
                             <tbody>
                                 <?php
-$__section_sec1_5_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1'] : false;
-$__section_sec1_5_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['contacts']->value) ? count($_loop) : max(0, (int) $_loop));
-$__section_sec1_5_total = $__section_sec1_5_loop;
+$__section_sec1_3_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1'] : false;
+$__section_sec1_3_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['contacts']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_sec1_3_total = $__section_sec1_3_loop;
 $_smarty_tpl->tpl_vars['__smarty_section_sec1'] = new Smarty_Variable(array());
-if ($__section_sec1_5_total != 0) {
-for ($__section_sec1_5_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] = 0; $__section_sec1_5_iteration <= $__section_sec1_5_total; $__section_sec1_5_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']++){
+if ($__section_sec1_3_total != 0) {
+for ($__section_sec1_3_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] = 0; $__section_sec1_3_iteration <= $__section_sec1_3_total; $__section_sec1_3_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']++){
 ?>
                                     <tr>
                                         <th scope="row"><?php echo $_smarty_tpl->tpl_vars['contacts']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_sec1']->value['index'] : null)]['phone'];?>
@@ -328,8 +331,8 @@ for ($__section_sec1_5_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_s
                                 <?php
 }
 }
-if ($__section_sec1_5_saved) {
-$_smarty_tpl->tpl_vars['__smarty_section_sec1'] = $__section_sec1_5_saved;
+if ($__section_sec1_3_saved) {
+$_smarty_tpl->tpl_vars['__smarty_section_sec1'] = $__section_sec1_3_saved;
 }
 ?>
                             </tbody>
@@ -396,6 +399,7 @@ $_smarty_tpl->tpl_vars['__smarty_section_sec1'] = $__section_sec1_5_saved;
             </p>
         </div>
     </div>
+</div>
 </div>
             <!-- Multi Select
             <div class="row clearfix">

@@ -31,38 +31,7 @@
             <div class="menu">
                 <ul class="list">
                     <li class="header">MENU NAVIGATION</li>
-
-            {section name=key loop=$menu.menu_nom}
-                {if $menu.menu_perm[key] <= $perm}
-                    <li>
-                        {if $menu.menu_link[key]|is_array}
-
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">{$menu.menu_icon[key]}</i>
-                            <span>{$menu.menu_nom[key]}</span>
-                        </a>
-                        <ul class="ml-menu">
-                            {assign var="smenu" value=$menu.menu_link[key]}
-                            {section name=i loop=$smenu.smenu_nom}
-                            <li>
-                                <a href="{$smenu.smenu_link[i]}">
-                                    <span>{$smenu.smenu_nom[i]}</span>
-                                    
-                                </a>
-                            </li>
-                            {/section}
-                        </ul>
-
-                        {else}
-
-                        <a href="{$menu.menu_link[key]}">
-                            <i class="material-icons">{$menu.menu_icon[key]}</i>
-                            <span>{$menu.menu_nom[key]}</span>
-                        </a>
-                        {/if}
-                    </li>
-                {/if}
-            {/section}
+                    {$left_menu}
 
                 <!-- Element supplémentaire
                     <li>

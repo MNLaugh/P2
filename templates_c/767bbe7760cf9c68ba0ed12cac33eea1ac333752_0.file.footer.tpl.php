@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-17 11:30:59
+/* Smarty version 3.1.30, created on 2017-01-25 10:23:00
   from "C:\xampp\htdocs\DISII\templates\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_587df2632298a5_07011580',
+  'unifunc' => 'content_58886e745bf5e2_08645901',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '767bbe7760cf9c68ba0ed12cac33eea1ac333752' => 
     array (
       0 => 'C:\\xampp\\htdocs\\DISII\\templates\\footer.tpl',
-      1 => 1484596404,
+      1 => 1485116980,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_587df2632298a5_07011580 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58886e745bf5e2_08645901 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <!-- Jquery Core Js -->
     <?php echo '<script'; ?>
@@ -105,14 +105,45 @@ function content_587df2632298a5_07011580 (Smarty_Internal_Template $_smarty_tpl)
  src="ressources/plugins/jquery-sparkline/jquery.sparkline.js"><?php echo '</script'; ?>
 >
     -->
-
+    <!-- Jquery DataTable Plugin Js -->
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-datatable/jquery.dataTables.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-datatable/extensions/export/buttons.flash.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-datatable/extensions/export/jszip.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-datatable/extensions/export/pdfmake.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-datatable/extensions/export/vfs_fonts.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-datatable/extensions/export/buttons.print.min.js"><?php echo '</script'; ?>
+>
     <!-- Custom Js -->
     <?php echo '<script'; ?>
  src="ressources/js/admin.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
+ src="ressources/js/pages/tables/jquery-datatable.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
  src="ressources/js/pages/forms/advanced-form-elements.js"><?php echo '</script'; ?>
 >
+
     <?php echo '<script'; ?>
  src="ressources/js/pages/index.js"><?php echo '</script'; ?>
 >

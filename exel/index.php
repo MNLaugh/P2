@@ -68,7 +68,7 @@ function array_by_excel($array, $caractExclusif){
 }
 require_once 'Classes/PHPExcel/IOFactory.php';
 // Chargement du fichier Excel
-$excelFile = "stagiaire.xlsx";
+$excelFile = "sale.xlsx";
 $objReader = PHPExcel_IOFactory::createReader('Excel2007');
 $objPHPExcel = $objReader->load($excelFile);
 //Itrating through all the sheets in the excel workbook and storing the array data

@@ -2,7 +2,7 @@
 
     Class Docs {
         /**
-         * Function qui retourne les plugins
+         * Function qui retourne un tableau des plugins
          *
          * @return Array 		-Tableau des plugins (HTML/CSS/JS)
          */
@@ -26,3 +26,4 @@
 			return $modulesList;
     	}
     }
+?>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-17 13:21:28
+/* Smarty version 3.1.30, created on 2017-01-25 10:27:45
   from "C:\xampp\htdocs\DISII\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_587e0c489a06b4_88391119',
+  'unifunc' => 'content_58886f9173b783_85199476',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0424c771cf0bac9eab9d70a3432901821d5ac0bf' => 
     array (
       0 => 'C:\\xampp\\htdocs\\DISII\\templates\\header.tpl',
-      1 => 1484655686,
+      1 => 1485336460,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_587e0c489a06b4_88391119 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58886f9173b783_85199476 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <HTML>
@@ -35,7 +35,7 @@ function content_587e0c489a06b4_88391119 (Smarty_Internal_Template $_smarty_tpl)
     <!-- Favicon-->
     <link rel="icon" href="ressources/images/favicon.ico" type="image/x-icon">
     <!-- Google Fonts -->
-    <link href="ressources/css/cyrillic.css" rel="stylesheet" type="text/css">
+    <link href="ressources/fonts/cyrillic.css" rel="stylesheet" type="text/css">
     <link href="ressources/materialIcones/material_icones.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap Core Css -->
     <link href="ressources/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">

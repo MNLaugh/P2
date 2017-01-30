@@ -9,7 +9,7 @@
     <!-- Favicon-->
     <link rel="icon" href="ressources/images/favicon.ico" type="image/x-icon">
     <!-- Google Fonts -->
-    <link href="ressources/css/cyrillic.css" rel="stylesheet" type="text/css">
+    <link href="ressources/fonts/cyrillic.css" rel="stylesheet" type="text/css">
     <link href="ressources/materialIcones/material_icones.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap Core Css -->
     <link href="ressources/plugins/bootstrap/css/bootstrap.css" rel="stylesheet">

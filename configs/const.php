@@ -1,66 +1,12 @@
 <?php
 //------ MYSQL -------\\
-/* Information de connection mysql
+//Information de connection mysql
 define('DBHOST','127.0.0.1');
-define('DBNAME','nom_db');
-define('DBUSER','user_db');
-define('DBPASS','pass_db');
-*/
-$db = ""; //new PDO("mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS);
+define('DBNAME','disiip2');
+define('DBUSER','root');
+define('DBPASS','');
 
-//------ MENU -------\\
-$menu_list=array(
-	//Noms
-	"menu_nom" 	=> array(
-		"Accueil",
-		"Formations",
-		"Stagiaires",
-		"Documentations"
-	),
-	//Icones
-	"menu_icon" => array(
-		"home",
-		"assignment",
-		"assignment_ind",
-		"info"
-	),
-	//Liens
-	"menu_link" => array(
-		"./",
-		"./?p=form",
-		"./?p=stag",
-		array(
-			"smenu_nom" => array(
-				"Présentation", 
-				"Variables", 
-				"ClassPHP", 
-				"Liens externes",
-				"Template Html"
-			),
-			"smenu_link" => array(
-				"./?p=docs/docs_accueil", 
-				"./?p=docs/docs_var", 
-				"./?p=docs/docs_class", 
-				"./?p=docs/docs_link",
-				"./html/"
-			),
-			"smenu_perm" => array(
-				2, 
-				2, 
-				2, 
-				2,
-				2
-			)
-		)
-	),
-	//Permissions
-	"menu_perm" => array(
-		0,
-		0,
-		0,
-		2
-	)
-);
+$db = new PDO("mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS);
 
 //------ UPLOAD -------\\
 $extension = '';
