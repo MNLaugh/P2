@@ -68,6 +68,11 @@ switch ($page) {
 		$formaQuery = new Formations($db);
 		$smarty->assign("allFormation", $formaQuery->get_arr_formation());
 	break;
+	case 'stagiaire':
+		require_once('./classes/class.stag.php'); //Inclusion de la class stagiaire
+		$stagQuery = new Stagiaire($db);
+		$smarty->assign("allStagiaire", $stagQuery->get_arr_stagiaire());
+	break;
 	default:
 		# code...
 		break;
