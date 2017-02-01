@@ -20,4 +20,16 @@
 function simply_notif($type, $texte, $horizontalPlacement="right"){
 	return array("type" => $type, "text" => $texte, "hP" => $horizontalPlacement);
 }
+
+/**
+ * Fonction d'inversement de la date
+ *
+ * @param String $date 			- Date avant modification
+ *
+ * @return String   				- Date près modification
+ **/
+function reformate_dat($date){
+	$date = str_replace("/", "-", $date);
+	return date("Y-m-d", strtotime($date));
+}
 ?>

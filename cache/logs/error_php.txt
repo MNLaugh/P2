@@ -272,3 +272,11 @@ Stack trace:
 [01-Feb-2017 15:08:50 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378
 [01-Feb-2017 15:08:50 Europe/Berlin] PHP Notice:  Undefined index: smarty in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 396
 [01-Feb-2017 16:12:57 Europe/Berlin] PHP Fatal error:  Cannot redeclare Formations::update_SQL_formation() in C:\xampp\htdocs\DISII\classes\class.forma.php on line 137
+[01-Feb-2017 18:16:41 Europe/Berlin] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\DISII\classes\class.forma.php on line 173
+[01-Feb-2017 18:16:41 Europe/Berlin] PHP Fatal error:  Call to a member function assign() on null in C:\xampp\htdocs\DISII\classes\class.forma.php on line 173
+[01-Feb-2017 18:23:46 Europe/Berlin] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\DISII\classes\class.forma.php on line 205
+[01-Feb-2017 18:23:46 Europe/Berlin] PHP Fatal error:  Call to a member function assign() on null in C:\xampp\htdocs\DISII\classes\class.forma.php on line 205
+[01-Feb-2017 18:23:49 Europe/Berlin] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\DISII\classes\class.forma.php on line 205
+[01-Feb-2017 18:23:49 Europe/Berlin] PHP Fatal error:  Call to a member function assign() on null in C:\xampp\htdocs\DISII\classes\class.forma.php on line 205
+[01-Feb-2017 18:24:12 Europe/Berlin] PHP Notice:  Undefined variable: tpl in C:\xampp\htdocs\DISII\classes\class.forma.php on line 205
+[01-Feb-2017 18:24:12 Europe/Berlin] PHP Fatal error:  Call to a member function assign() on null in C:\xampp\htdocs\DISII\classes\class.forma.php on line 205

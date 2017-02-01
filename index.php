@@ -47,10 +47,6 @@ $tpl->assign("arianna", $menuQuery->html_arianna($page));
 //Transfert de la page à la vue
 $tpl->assign("page", "templates/page/".$page);
 
-
-
-
-
 //perm au max (3)
 $tpl->assign("perm", 2);
 if(substr_count($page, 'docs')==true){
@@ -77,137 +73,16 @@ switch ($page) {
 		//		Assignation de l'option selected
 		$tpl->assign("levelFormation_selected", "");	
 
-
 		if(isset($_GET['op'])=='del' && isset($_GET['id'])){
 			if($formaQuery->delete_formation_by_id($_GET['id'])){
 				$noty[] = simply_notif('success', "Formation supprimer !");
 			}
 		}
 
-function reformate_dat($date){
-	$date = str_replace("/", "-", $date);
-	return date("Y-m-d", strtotime($date));
-}
-
 		//Si l'utilisateur à envoyer le formulaire d'ajout d'une formation
 		if(isset($_POST['addFormation'])){
-			//Initialisation du tableau envoyer à la classe formation en fin de traitement pour finaliser l'insertion en BDD
-			$arrAddFormation =[];
-
-			/**
-			*	Traitement Nom court formation
-			* Si il n'existe pas de variable post "sNameFormation" ou si cette variable est égale à "" (rien)
-			*/
-			if(!isset($_POST['sNameFormation']) || $_POST['sNameFormation']==''){
-				//on ajoute une erreur au tableau "noty"
-				$noty[] = simply_notif('danger', "Aucun acronyme n'a été saisie !");
-			//Sinon
-			}else{
-				//On assign une valeur au tableau envoyer pour l'insertion en BDD
-				$arrAddFormation['sNameFormation'] = $_POST['sNameFormation'];
-				//Et on assigne le contenu de la variable POST "sNameFormation" dans "isset_sNameFormation" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-				$tpl->assign("isset_sNameFormation", $_POST['sNameFormation']);
-			}
-
-			/**
-			*	Traitement Nom long formation
-			* Si il n'existe pas de variable post "lNameFormation" ou si cette variable est égale à "" (rien)
-			*/
-			if(!isset($_POST['lNameFormation']) || $_POST['lNameFormation']==''){
-				//on ajoute une erreur au tableau "noty"
-				$noty[] = simply_notif('danger', "Aucun nom complet n'a été saisie !");
-			//Sinon
-			}else{
-				//On assign une valeur au tableau envoyer pour l'insertion en BDD
-				$arrAddFormation['lNameFormation'] = $_POST['lNameFormation'];
-				//Et on assigne le contenu de la variable POST "lNameFormation" dans "isset_lNameFormation" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-				$tpl->assign("isset_lNameFormation", $_POST['lNameFormation']);
-			}
-
-			/**
-			*	Traitement Description formation
-			* Si il n'existe pas de variable post "descFormation" ou si cette variable est égale à "" (rien)
-			*/
-			if(!isset($_POST['descFormation']) || $_POST['descFormation']==''){
-				//on ajoute une erreur au tableau "noty"
-				$noty[] = simply_notif('danger', "Aucune description n'a été saisie !");
-			//Sinon
-			}else{
-				//On assign une valeur au tableau envoyer pour l'insertion en BDD
-				$arrAddFormation['descFormation'] = $_POST['descFormation'];
-				//Et on assigne le contenu de la variable POST "descFormation" dans "isset_descFormation" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-				$tpl->assign("isset_descFormation", $_POST['descFormation']);
-			}
-
-			/**
-			*	Traitement Niveau diplomant formation
-			* Si il n'existe pas de variable post "levelFormation" ou si cette variable est égale à "" (rien)
-			*/
-			if(!isset($_POST['levelFormation']) || $_POST['levelFormation']==''){
-				//on ajoute une erreur au tableau "noty"
-				$noty[] = simply_notif('danger', "Veuillez choisir un niveau diplomant !");
-			//Sinon
-			}else{
-				//On assign une valeur au tableau envoyer pour l'insertion en BDD
-				$arrAddFormation['levelFormation'] = $_POST['levelFormation'];
-				//Et on assigne le contenu de la variable POST "levelFormation" dans "levelFormation_selected" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-				$tpl->assign("levelFormation_selected", $_POST['levelFormation']);
-			}
-
-			/**
-			*	Traitement Date de début formation
-			* Si il n'existe pas de variable post "dInFormation" ou si cette variable est égale à "" (rien)
-			*/
-			if(!isset($_POST['dInFormation']) || $_POST['dInFormation']==''){
-				//on ajoute une erreur au tableau "noty"
-				$noty[] = simply_notif('danger', "Aucune date d'entrée n'a été saisie !");
-			//Sinon
-			}else{
-				//On assign une valeur au tableau envoyer pour l'insertion en BDD
-				$arrAddFormation['dInFormation'] = $newDate = reformate_dat($_POST['dInFormation']);
-				//Et on assigne le contenu de la variable POST "dInFormation" dans "isset_dInFormation" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-				$tpl->assign("isset_dInFormation", $_POST['dInFormation']);
-			}
-
-			/**
-			*	Traitement Date de début formation
-			* Si il n'existe pas de variable post "dOutFormation" ou si cette variable est égale à "" (rien)
-			*/
-			if(!isset($_POST['dOutFormation']) || $_POST['dOutFormation']==''){
-				//On ajoute une erreur au tableau "noty"
-				$noty[] = simply_notif('danger', "Aucune date de fin n'a été saisie !");
-			//Sinon
-			}else{
-				//On assign une valeur au tableau envoyer pour l'insertion en BDD
-				$arrAddFormation['dOutFormation'] = $newDate = reformate_dat($_POST['dOutFormation']);
-				//Et on assigne le contenu de la variable POST "dOutFormation" dans "isset_dOutFormation" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-				$tpl->assign("isset_dOutFormation", $_POST['dOutFormation']);
-			}
-
-			/**
-			*	Traitement Date de fin formation
-			* Si il n'existe pas de variable post "modeFormation" ou si cette variable est égale à "" (rien)
-			*/
-			if(!isset($_POST['modeFormation']) || $_POST['modeFormation']==''){
-				//on ajoute une erreur au tableau "noty"
-				$noty[] = simply_notif('danger', "Aucun mode de formation choisie !");
-			//Sinon
-			}else{
-				//On assign une valeur au tableau envoyer pour l'insertion en BDD
-				$arrAddFormation['modeFormation'] = $_POST['modeFormation'];
-				//Et on assigne le contenu de la variable POST "modeFormation" dans "isset_modeFormation" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-				$tpl->assign("isset_modeFormation", $_POST['modeFormation']);
-			}
-
-			/**
-			*	Envoie final à la classe pour insertion en BDD
-			* Si il n'existe pas d'erreurs et si la fonction d'ajout en base de donnée retourne true on assigne le message de succès
-			* Sinon message d'erreur "Une erreur est survenu"
-			*/
-			if(!isset($noty) && $formaQuery->add_formation($arrAddFormation)){
-				$noty[] = simply_notif('success', "Formation ajouter avec succès !", "center");
-				header("refresh;2:url=./?p=formation");
-			}
+			return $formaQuery->add_formation($_POST);
+			header("refresh;2:url=./?p=formation");
 		}
 
 		//Assigne le tableau des formation a la variable de vue "allFormation"
