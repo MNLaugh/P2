@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-30 16:52:07
+/* Smarty version 3.1.30, created on 2017-02-01 11:09:12
   from "C:\xampp\htdocs\DISII\templates\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_588f612746b391_44454271',
+  'unifunc' => 'content_5891b3c8765542_58847016',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '767bbe7760cf9c68ba0ed12cac33eea1ac333752' => 
     array (
       0 => 'C:\\xampp\\htdocs\\DISII\\templates\\footer.tpl',
-      1 => 1485791385,
+      1 => 1485943699,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_588f612746b391_44454271 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5891b3c8765542_58847016 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <!-- Jquery Core Js -->
     <?php echo '<script'; ?>
@@ -133,6 +133,18 @@ function content_588f612746b391_44454271 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
  src="ressources/plugins/jquery-datatable/extensions/export/buttons.print.min.js"><?php echo '</script'; ?>
 >
+
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-inputmask/jquery.inputmask.bundle.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-inputmask/inputmask/inputmask.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-inputmask/inputmask/inputmask.date.extensions.js"><?php echo '</script'; ?>
+>
+
+
     <!-- Custom Js -->
     <?php echo '<script'; ?>
  src="ressources/js/admin.js"><?php echo '</script'; ?>

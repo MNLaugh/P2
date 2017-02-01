@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-25 10:23:08
+/* Smarty version 3.1.30, created on 2017-02-01 14:20:40
   from "C:\xampp\htdocs\DISII\templates\page\accueil.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58886e7c5ccdf4_29827110',
+  'unifunc' => 'content_5891e0a81df7c9_31650131',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c187345b60056b47ad63ed7385f09d36265f9dc2' => 
     array (
       0 => 'C:\\xampp\\htdocs\\DISII\\templates\\page\\accueil.tpl',
-      1 => 1485213700,
+      1 => 1485941310,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58886e7c5ccdf4_29827110 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5891e0a81df7c9_31650131 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_capitalize')) require_once 'C:\\xampp\\htdocs\\DISII\\smarties\\libs\\plugins\\modifier.capitalize.php';
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\xampp\\htdocs\\DISII\\smarties\\libs\\plugins\\modifier.date_format.php';
 if (!is_callable('smarty_function_html_select_date')) require_once 'C:\\xampp\\htdocs\\DISII\\smarties\\libs\\plugins\\function.html_select_date.php';

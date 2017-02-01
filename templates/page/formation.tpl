@@ -40,16 +40,26 @@
                                 <td>{$allFormation[key]['NSFORM']}</td>
                                 <td>{$allFormation[key]['NLFORM']}</td>
                                 <td>{$allFormation[key]['DEFORM']}</td>
-                                <td>{$allFormation[key]['NIFORMA']}</td>
+                                <td>{$allFormation[key]['NIFORM']}</td>
                                 <td>{$allFormation[key]['DATEIN']}</td>
                                 <td>{$allFormation[key]['DATOUT']}</td>
                                 <td>{$allFormation[key]['MOFORM']}</td>
-                                <td style="width: 8em;">
-<a title="Voir {$allFormation[key]['NSFORM']}" href="./?p=formation&op=view&id={$allFormation[key]['IDFORM']}" class="btn btn-info btn-xs waves-effect">
-    <i class="material-icons">remove_red_eye</i>
-</a>
-                                    <a title="Editer" class="btn btn-success btn-xs waves-effect"><i class="material-icons">mode_edit</i></a>
-                                    <a title="Supprimer" class="btn btn-danger btn-xs waves-effect"><i class="material-icons">delete_forever</i></a>
+                                <td style="width: 9em;">
+									<a title="Voir {$allFormation[key]['NSFORM']}" 
+										href="./?p=formation&op=view&id={$allFormation[key]['IDFORM']}" 
+										class="btn btn-info btn-xs waves-effect">
+									    <i class="material-icons">remove_red_eye</i>
+									</a>
+									<a title="Editer {$allFormation[key]['NSFORM']}" 
+										href="./?p=formation&op=edit&id={$allFormation[key]['IDFORM']}" 
+										class="btn btn-success btn-xs waves-effect">
+										<i class="material-icons">mode_edit</i>
+									</a>
+									<a title="Supprimer {$allFormation[key]['NSFORM']}" 
+										href="./?p=formation&op=del&id={$allFormation[key]['IDFORM']}" 
+										class="btn btn-danger btn-xs waves-effect">
+										<i class="material-icons">delete_forever</i>
+									</a>
                                 </td>
                             </tr>
                         {/section}
@@ -73,35 +83,60 @@
                                 <small>Ajout</small>
                             </h2>
                         </div>
-                        <div class="body">
-                            <form action="" method="POST">
+                        <div id="addForm" class="body">
+
+                        <!-- 
+                        Liste des variables post utilisées dans la page
+                        Input list POST var : 
+                        	- Nom court : sNameFormation
+                        	- Nom long : lNameFormation
+                        	- Niveau : levelFormation
+                        	- Date de début : dInFormation
+                        	- Date de fin : dOutFormation
+                        	- Mode de formation : modeFormation
+                        	- Bouton envoyer : addFormation
+                         -->
+
+                            <form action="#addForm" method="POST">
                                 <!-- Nom de la formation 2 champs "Nom court" / "Nom complet" -->
                                 <div class="row clearfix">
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input name="sName-formation" type="text" class="form-control" placeholder="Acronyme de la formation" />
+                                                <input name="sNameFormation" type="text" class="form-control" placeholder="Acronyme de la formation" 
+                                                value="{if isset($isset_sNameFormation)}{$isset_sNameFormation}{/if}" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <input name="lName-formation" type="text" class="form-control" placeholder="Nom long de la formation" />
+                                                <input name="lNameFormation" type="text" class="form-control" placeholder="Nom complet de la formation"
+                                                value="{if isset($isset_lNameFormation)}{$isset_lNameFormation}{/if}" />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+	                            <h2 class="card-inside-title">Description</h2>
+	                            <div class="row clearfix">
+	                                <div class="col-sm-12">
+	                                    <div class="form-group">
+	                                        <div class="form-line">
+	                                            <textarea name="descFormation" rows="4" class="form-control no-resize">{if isset($isset_descFormation)}{$isset_descFormation}{else}{"Description de la formation..."}{/if}</textarea>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
+
                                 <!-- Niveau diploment -->
                                 <div class="row clearfix">
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <div class="col-sm-6">
-                                                <select class="form-control show-tick" name="niv-formation">
-                                                    <option value="">-- Niveau diploment --</option>
-                                                    <option value="10">10</option>
-                                                    <option value="20">20</option>
-                                                </select>
+							                    <select class="form-control show-tick" name="levelFormation">
+							                        {html_options values=$levelFormation_values selected=$levelFormation_selected output=$levelFormation_output class="btn btn-default btn-list"}
+							                    </select>
                                             </div>
                                         </div>
                                     </div>
@@ -109,15 +144,27 @@
                                 <!-- Date d'entrée et de sortie -->
                                 <div class="row clearfix">
                                     <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <label for="date_in">Date de début</label><br>
-                                            <input id="date_in" name="dIn_formation" type="date" class="form-control" placeholder="jj/mm/aaaa" />
+                                        <b>Date de début</b>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">date_range</i>
+                                            </span>
+                                            <div class="form-line">
+                                                <input id="dateInForm" name="dInFormation" type="text" class="form-control date" placeholder="Ex: 30/07/2016"
+                                                value="{if isset($isset_dInFormation)}{$isset_dInFormation}{/if}">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-sm-3">
-                                        <div class="form-group">
-                                            <label for="date_out">Date de fin</label><br>
-                                            <input id="date_out" name="dOut_formation" type="date" class="form-control" placeholder="jj/mm/aaaa" />
+                                        <b>Date de fin</b>
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">date_range</i>
+                                            </span>
+                                            <div class="form-line">
+                                                <input id="dateOutForm" name="dOutFormation" type="text" class="form-control date" placeholder="Ex: 25/04/2017"
+                                                value="{if isset($isset_dOutFormation)}{$isset_dOutFormation}{/if}">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -125,17 +172,18 @@
                                 <div class="row clearfix">
                                     <div class="col-sm-6">
                                     <label>Mode de formation</label><br>
-                                    <input name="mode_formation" type="radio" id="radio_11" class="radio-col-indigo" />
+                                    <input name="modeFormation" value="Continue" type="radio" id="radio_11" class="radio-col-indigo" 
+                                    {if $isset_modeFormation=='Continue'}{"checked"}{/if} />
                                     <label for="radio_11">Continue</label>
-
-                                    <input name="mode_formation" type="radio" id="radio_12" class="radio-col-indigo" />
+                                    <input name="modeFormation" value="Alternance" type="radio" id="radio_12" class="radio-col-indigo" 
+                                    {if $isset_modeFormation=='Alternance'}{"checked"}{/if} />
                                     <label for="radio_12">Alternance</label>
                                     </div>
                                 </div>
                                 <!-- bouton d'envoi -->
                                 <div class="row clearfix">
                                     <div class="col-sm-6">
-                                        <input type="submit" class="btn bg-indigo waves-effect" value="Envoyer" />
+                                        <input name="addFormation" type="submit" class="btn bg-indigo waves-effect" value="Envoyer" />
                                     </div>
                                 </div>
                             </form>

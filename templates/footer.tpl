@@ -49,6 +49,12 @@
     <script src="ressources/plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
     <script src="ressources/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
     <script src="ressources/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
+
+    <script src="ressources/plugins/jquery-inputmask/jquery.inputmask.bundle.js"></script>
+    <script src="ressources/plugins/jquery-inputmask/inputmask/inputmask.js"></script>
+    <script src="ressources/plugins/jquery-inputmask/inputmask/inputmask.date.extensions.js"></script>
+
+
     <!-- Custom Js -->
     <script src="ressources/js/admin.js"></script>
     <script src="ressources/js/pages/tables/jquery-datatable.js"></script>

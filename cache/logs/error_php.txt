@@ -207,3 +207,68 @@ Stack trace:
 [01-Feb-2017 07:46:45 Europe/Paris] PHP  10. Smarty_Template_Compiled->render() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
 [01-Feb-2017 07:46:45 Europe/Paris] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
 [01-Feb-2017 07:46:45 Europe/Paris] PHP  12. content_589178c9e56252_65796485() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[01-Feb-2017 09:32:09 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378
+[01-Feb-2017 09:33:19 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378
+[01-Feb-2017 10:19:21 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378
+[01-Feb-2017 11:09:12 Europe/Berlin] PHP Notice:  Undefined index: dInFormation in C:\xampp\htdocs\DISII\index.php on line 88
+[01-Feb-2017 11:09:36 Europe/Berlin] PHP Notice:  Undefined index: dInFormation in C:\xampp\htdocs\DISII\index.php on line 88
+[01-Feb-2017 11:16:16 Europe/Berlin] PHP Notice:  Undefined index: dInFormation in C:\xampp\htdocs\DISII\index.php on line 92
+[01-Feb-2017 11:16:32 Europe/Berlin] PHP Notice:  Undefined index: dInFormation in C:\xampp\htdocs\DISII\index.php on line 92
+[01-Feb-2017 11:35:29 Europe/Berlin] PHP Fatal error:  Uncaught  --> Smarty Compiler: Syntax error in template "file:C:\xampp\htdocs\DISII\templates\page\formation.tpl"  on line 164 "{if isset($isset_modeFormation)=='Continue'}{echo "checked"}{/if} />" unknown tag "echo" <-- 
+  thrown in C:\xampp\htdocs\DISII\smarties\libs\sysplugins\smarty_internal_templatecompilerbase.php on line 164
+[01-Feb-2017 11:35:46 Europe/Berlin] PHP Fatal error:  Uncaught  --> Smarty Compiler: Syntax error in template "file:C:\xampp\htdocs\DISII\templates\page\formation.tpl"  on line 164 "{if $isset_modeFormation=='Continue'}{echo "checked"}{/if} />" unknown tag "echo" <-- 
+  thrown in C:\xampp\htdocs\DISII\smarties\libs\sysplugins\smarty_internal_templatecompilerbase.php on line 164
+[01-Feb-2017 12:07:37 Europe/Berlin] PHP Notice:  Undefined index: isset_modeFormation in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 242
+[01-Feb-2017 12:07:37 Europe/Berlin] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 242
+[01-Feb-2017 12:07:37 Europe/Berlin] PHP Notice:  Undefined index: isset_modeFormation in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 247
+[01-Feb-2017 12:07:38 Europe/Berlin] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 247
+[01-Feb-2017 12:08:00 Europe/Berlin] PHP Notice:  Undefined index: isset_modeFormation in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 241
+[01-Feb-2017 12:08:00 Europe/Berlin] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 241
+[01-Feb-2017 12:08:00 Europe/Berlin] PHP Notice:  Undefined index: isset_modeFormation in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 246
+[01-Feb-2017 12:08:00 Europe/Berlin] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 246
+[01-Feb-2017 12:08:14 Europe/Berlin] PHP Notice:  Undefined index: isset_modeFormation in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 240
+[01-Feb-2017 12:08:14 Europe/Berlin] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 240
+[01-Feb-2017 12:08:14 Europe/Berlin] PHP Notice:  Undefined index: isset_modeFormation in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 245
+[01-Feb-2017 12:08:14 Europe/Berlin] PHP Notice:  Trying to get property of non-object in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 245
+[01-Feb-2017 12:28:54 Europe/Berlin] PHP Fatal error:  Call to undefined function add_SQL_formation() in C:\xampp\htdocs\DISII\classes\class.forma.php on line 54
+[01-Feb-2017 12:29:12 Europe/Berlin] PHP Notice:  Undefined variable: sNameFormationlNameFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 54
+[01-Feb-2017 12:29:12 Europe/Berlin] PHP Warning:  Missing argument 7 for Formations::add_SQL_formation(), called in C:\xampp\htdocs\DISII\classes\class.forma.php on line 54 and defined in C:\xampp\htdocs\DISII\classes\class.forma.php on line 39
+[01-Feb-2017 12:29:18 Europe/Berlin] PHP Notice:  Undefined variable: sNameFormationlNameFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 54
+[01-Feb-2017 12:29:18 Europe/Berlin] PHP Warning:  Missing argument 7 for Formations::add_SQL_formation(), called in C:\xampp\htdocs\DISII\classes\class.forma.php on line 54 and defined in C:\xampp\htdocs\DISII\classes\class.forma.php on line 39
+[01-Feb-2017 12:29:32 Europe/Berlin] PHP Notice:  Undefined variable: sNameFormationlNameFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 54
+[01-Feb-2017 12:29:32 Europe/Berlin] PHP Warning:  Missing argument 7 for Formations::add_SQL_formation(), called in C:\xampp\htdocs\DISII\classes\class.forma.php on line 54 and defined in C:\xampp\htdocs\DISII\classes\class.forma.php on line 39
+[01-Feb-2017 13:52:54 Europe/Berlin] PHP Notice:  Undefined variable: sNameFormationlNameFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 70
+[01-Feb-2017 13:52:54 Europe/Berlin] PHP Warning:  Missing argument 7 for Formations::add_SQL_formation(), called in C:\xampp\htdocs\DISII\classes\class.forma.php on line 70 and defined in C:\xampp\htdocs\DISII\classes\class.forma.php on line 39
+[01-Feb-2017 13:52:54 Europe/Berlin] PHP Notice:  Undefined variable: modeFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 50
+[01-Feb-2017 13:52:54 Europe/Berlin] PHP Notice:  Undefined index: NIFORMA in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 78
+[01-Feb-2017 13:52:54 Europe/Berlin] PHP Notice:  Undefined index: NIFORMA in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 78
+[01-Feb-2017 13:52:54 Europe/Berlin] PHP Notice:  Undefined index: NIFORMA in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 78
+[01-Feb-2017 13:52:54 Europe/Berlin] PHP Notice:  Undefined index: NIFORMA in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 78
+[01-Feb-2017 13:52:54 Europe/Berlin] PHP Notice:  Undefined index: NIFORMA in C:\xampp\htdocs\DISII\templates_c\d590d1784610742ec3a7ae5826c25a40632eddd6_0.file.formation.tpl.php on line 78
+[01-Feb-2017 13:54:06 Europe/Berlin] PHP Notice:  Undefined variable: sNameFormationlNameFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 70
+[01-Feb-2017 13:54:06 Europe/Berlin] PHP Warning:  Missing argument 7 for Formations::add_SQL_formation(), called in C:\xampp\htdocs\DISII\classes\class.forma.php on line 70 and defined in C:\xampp\htdocs\DISII\classes\class.forma.php on line 39
+[01-Feb-2017 13:54:06 Europe/Berlin] PHP Notice:  Undefined variable: modeFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 50
+[01-Feb-2017 13:54:40 Europe/Berlin] PHP Notice:  Undefined variable: sNameFormationlNameFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 70
+[01-Feb-2017 13:54:40 Europe/Berlin] PHP Warning:  Missing argument 7 for Formations::add_SQL_formation(), called in C:\xampp\htdocs\DISII\classes\class.forma.php on line 70 and defined in C:\xampp\htdocs\DISII\classes\class.forma.php on line 39
+[01-Feb-2017 13:54:40 Europe/Berlin] PHP Notice:  Undefined variable: modeFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 50
+[01-Feb-2017 13:54:40 Europe/Berlin] PHP Notice:  Undefined variable: sNameFormationlNameFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 70
+[01-Feb-2017 13:54:40 Europe/Berlin] PHP Warning:  Missing argument 7 for Formations::add_SQL_formation(), called in C:\xampp\htdocs\DISII\classes\class.forma.php on line 70 and defined in C:\xampp\htdocs\DISII\classes\class.forma.php on line 39
+[01-Feb-2017 13:54:40 Europe/Berlin] PHP Notice:  Undefined variable: modeFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 50
+[01-Feb-2017 13:55:15 Europe/Berlin] PHP Notice:  Undefined variable: sNameFormationlNameFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 70
+[01-Feb-2017 13:55:15 Europe/Berlin] PHP Warning:  Missing argument 7 for Formations::add_SQL_formation(), called in C:\xampp\htdocs\DISII\classes\class.forma.php on line 70 and defined in C:\xampp\htdocs\DISII\classes\class.forma.php on line 39
+[01-Feb-2017 13:55:15 Europe/Berlin] PHP Notice:  Undefined variable: modeFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 50
+[01-Feb-2017 13:55:15 Europe/Berlin] PHP Notice:  Undefined variable: sNameFormationlNameFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 70
+[01-Feb-2017 13:55:15 Europe/Berlin] PHP Warning:  Missing argument 7 for Formations::add_SQL_formation(), called in C:\xampp\htdocs\DISII\classes\class.forma.php on line 70 and defined in C:\xampp\htdocs\DISII\classes\class.forma.php on line 39
+[01-Feb-2017 13:55:15 Europe/Berlin] PHP Notice:  Undefined variable: modeFormation in C:\xampp\htdocs\DISII\classes\class.forma.php on line 50
+[01-Feb-2017 14:20:11 Europe/Berlin] PHP Fatal error:  Call to undefined function delete_formation_by_id() in C:\xampp\htdocs\DISII\index.php on line 82
+[01-Feb-2017 14:20:40 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378
+[01-Feb-2017 14:20:40 Europe/Berlin] PHP Notice:  Undefined index: smarty in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 396
+[01-Feb-2017 14:20:52 Europe/Berlin] PHP Fatal error:  Call to undefined function get_once_by_id_formation() in C:\xampp\htdocs\DISII\classes\class.forma.php on line 124
+[01-Feb-2017 14:21:08 Europe/Berlin] PHP Fatal error:  Call to undefined function del_SQL_formation() in C:\xampp\htdocs\DISII\classes\class.forma.php on line 125
+[01-Feb-2017 14:21:10 Europe/Berlin] PHP Fatal error:  Call to undefined function del_SQL_formation() in C:\xampp\htdocs\DISII\classes\class.forma.php on line 125
+[01-Feb-2017 14:35:38 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378
+[01-Feb-2017 14:35:38 Europe/Berlin] PHP Notice:  Undefined index: smarty in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 396
+[01-Feb-2017 15:08:26 Europe/Berlin] PHP Fatal error:  Cannot redeclare Formations::update_SQL_formation() in C:\xampp\htdocs\DISII\classes\class.forma.php on line 137
+[01-Feb-2017 15:08:50 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378
+[01-Feb-2017 15:08:50 Europe/Berlin] PHP Notice:  Undefined index: smarty in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 396
+[01-Feb-2017 16:12:57 Europe/Berlin] PHP Fatal error:  Cannot redeclare Formations::update_SQL_formation() in C:\xampp\htdocs\DISII\classes\class.forma.php on line 137
