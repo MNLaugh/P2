@@ -173,3 +173,37 @@ Stack trace:
 [26-Jan-2017 17:25:14 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378
 [26-Jan-2017 18:45:20 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378
 [30-Jan-2017 15:04:45 Europe/Berlin] PHP Notice:  Undefined index: menu_list in C:\xampp\htdocs\DISII\templates_c\c187345b60056b47ad63ed7385f09d36265f9dc2_0.file.accueil.tpl.php on line 378
+[01-Feb-2017 06:16:22 Europe/Paris] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'disiip2'' in C:\wamp\www\DISII\configs\const.php:9
+Stack trace:
+#0 C:\wamp\www\DISII\configs\const.php(9): PDO->__construct('mysql:host=127....', 'root', '')
+#1 C:\wamp\www\DISII\index.php(13): require_once('C:\\wamp\\www\\DIS...')
+#2 {main}
+  thrown in C:\wamp\www\DISII\configs\const.php on line 9
+[01-Feb-2017 06:57:30 Europe/Paris] PHP Notice:  Undefined index: menu_list in C:\wamp\www\DISII\templates_c\c0528d9be8fcd63b17614ea4ced0525458473fd8_0.file.accueil.tpl.php on line 378
+[01-Feb-2017 06:57:30 Europe/Paris] PHP Stack trace:
+[01-Feb-2017 06:57:30 Europe/Paris] PHP   1. {main}() C:\wamp\www\DISII\index.php:0
+[01-Feb-2017 06:57:30 Europe/Paris] PHP   2. Smarty_Internal_TemplateBase->display() C:\wamp\www\DISII\index.php:98
+[01-Feb-2017 06:57:30 Europe/Paris] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[01-Feb-2017 06:57:30 Europe/Paris] PHP   4. Smarty_Internal_Template->render() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[01-Feb-2017 06:57:30 Europe/Paris] PHP   5. Smarty_Template_Compiled->render() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[01-Feb-2017 06:57:30 Europe/Paris] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[01-Feb-2017 06:57:30 Europe/Paris] PHP   7. content_589178c93712c9_20215342() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[01-Feb-2017 06:57:30 Europe/Paris] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\wamp\www\DISII\templates_c\743c7b096df24518e899493baaa0da5a3ccd37ad_0.file.index.tpl.php:48
+[01-Feb-2017 06:57:30 Europe/Paris] PHP   9. Smarty_Internal_Template->render() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[01-Feb-2017 06:57:30 Europe/Paris] PHP  10. Smarty_Template_Compiled->render() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[01-Feb-2017 06:57:30 Europe/Paris] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[01-Feb-2017 06:57:30 Europe/Paris] PHP  12. content_589178c9e56252_65796485() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[01-Feb-2017 07:46:45 Europe/Paris] PHP Notice:  Undefined index: menu_list in C:\wamp\www\DISII\templates_c\c0528d9be8fcd63b17614ea4ced0525458473fd8_0.file.accueil.tpl.php on line 378
+[01-Feb-2017 07:46:45 Europe/Paris] PHP Stack trace:
+[01-Feb-2017 07:46:45 Europe/Paris] PHP   1. {main}() C:\wamp\www\DISII\index.php:0
+[01-Feb-2017 07:46:45 Europe/Paris] PHP   2. Smarty_Internal_TemplateBase->display() C:\wamp\www\DISII\index.php:98
+[01-Feb-2017 07:46:45 Europe/Paris] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[01-Feb-2017 07:46:45 Europe/Paris] PHP   4. Smarty_Internal_Template->render() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[01-Feb-2017 07:46:45 Europe/Paris] PHP   5. Smarty_Template_Compiled->render() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[01-Feb-2017 07:46:45 Europe/Paris] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[01-Feb-2017 07:46:45 Europe/Paris] PHP   7. content_589178c93712c9_20215342() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[01-Feb-2017 07:46:45 Europe/Paris] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\wamp\www\DISII\templates_c\743c7b096df24518e899493baaa0da5a3ccd37ad_0.file.index.tpl.php:48
+[01-Feb-2017 07:46:45 Europe/Paris] PHP   9. Smarty_Internal_Template->render() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[01-Feb-2017 07:46:45 Europe/Paris] PHP  10. Smarty_Template_Compiled->render() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[01-Feb-2017 07:46:45 Europe/Paris] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[01-Feb-2017 07:46:45 Europe/Paris] PHP  12. content_589178c9e56252_65796485() C:\wamp\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128

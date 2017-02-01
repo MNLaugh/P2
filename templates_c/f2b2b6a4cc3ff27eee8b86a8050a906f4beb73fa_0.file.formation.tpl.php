@@ -1,3 +1,27 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-02-01 08:12:21
+  from "C:\wamp\www\DISII\templates\page\formation.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_58918a55b07ed0_59637880',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'f2b2b6a4cc3ff27eee8b86a8050a906f4beb73fa' => 
+    array (
+      0 => 'C:\\wamp\\www\\DISII\\templates\\page\\formation.tpl',
+      1 => 1485933140,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_58918a55b07ed0_59637880 (Smarty_Internal_Template $_smarty_tpl) {
+?>
             <!-- Exportable Table -->
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -35,24 +59,46 @@
                                     </tr>
                                 </tfoot>
                                 <tbody>
-                        {section name=key loop=$allFormation}
+                        <?php
+$__section_key_0_saved = isset($_smarty_tpl->tpl_vars['__smarty_section_key']) ? $_smarty_tpl->tpl_vars['__smarty_section_key'] : false;
+$__section_key_0_loop = (is_array(@$_loop=$_smarty_tpl->tpl_vars['allFormation']->value) ? count($_loop) : max(0, (int) $_loop));
+$__section_key_0_total = $__section_key_0_loop;
+$_smarty_tpl->tpl_vars['__smarty_section_key'] = new Smarty_Variable(array());
+if ($__section_key_0_total != 0) {
+for ($__section_key_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] = 0; $__section_key_0_iteration <= $__section_key_0_total; $__section_key_0_iteration++, $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']++){
+?>
                             <tr>
-                                <td>{$allFormation[key]['NSFORM']}</td>
-                                <td>{$allFormation[key]['NLFORM']}</td>
-                                <td>{$allFormation[key]['DEFORM']}</td>
-                                <td>{$allFormation[key]['NIFORMA']}</td>
-                                <td>{$allFormation[key]['DATEIN']}</td>
-                                <td>{$allFormation[key]['DATOUT']}</td>
-                                <td>{$allFormation[key]['MOFORM']}</td>
+                                <td><?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['NSFORM'];?>
+</td>
+                                <td><?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['NLFORM'];?>
+</td>
+                                <td><?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['DEFORM'];?>
+</td>
+                                <td><?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['NIFORMA'];?>
+</td>
+                                <td><?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['DATEIN'];?>
+</td>
+                                <td><?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['DATOUT'];?>
+</td>
+                                <td><?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['MOFORM'];?>
+</td>
                                 <td style="width: 8em;">
-<a title="Voir {$allFormation[key]['NSFORM']}" href="./?p=formation&op=view&id={$allFormation[key]['IDFORM']}" class="btn btn-info btn-xs waves-effect">
+<a title="Voir <?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['NSFORM'];?>
+" href="./?p=formation&op=view&id=<?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['IDFORM'];?>
+" class="btn btn-info btn-xs waves-effect">
     <i class="material-icons">remove_red_eye</i>
 </a>
                                     <a title="Editer" class="btn btn-success btn-xs waves-effect"><i class="material-icons">mode_edit</i></a>
                                     <a title="Supprimer" class="btn btn-danger btn-xs waves-effect"><i class="material-icons">delete_forever</i></a>
                                 </td>
                             </tr>
-                        {/section}
+                        <?php
+}
+}
+if ($__section_key_0_saved) {
+$_smarty_tpl->tpl_vars['__smarty_section_key'] = $__section_key_0_saved;
+}
+?>
                                 </tbody>
                             </table>
                         </div>
@@ -143,4 +189,5 @@
                     </div>
                 </div>
             </div>
-            <!-- #END# Input -->
+            <!-- #END# Input --><?php }
+}
