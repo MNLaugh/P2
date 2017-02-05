@@ -155,6 +155,13 @@
          * Fonction d'ajout d'une formations
          *
          * @param Array $arrAddFormation    - Tableau contenant les valeurs a ajouter à la base de donnée
+        sNameFormation
+        lNameFormation
+        descFormation
+        levelFormation
+        dInFormation
+        dOutFormation
+        modeFormation
          * @return Boolean                  - renvoi "true" si tout c'est bien passer
          */
         public function add_formation($arrAddFormation){
@@ -167,11 +174,8 @@
                 $noty[] = simply_notif('danger', "Aucun acronyme n'a été saisie !");
             //Sinon
             }else{
-                //On assign une valeur au tableau envoyer pour l'insertion en BDD
-                $arrAddFormation['sNameFormation'] = $arrAddFormation['sNameFormation'];
-                //Et on assigne le contenu de la variable POST "sNameFormation" dans "isset_sNameFormation" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-                
-                //$tpl->assign("isset_sNameFormation", $arrAddFormation['sNameFormation']);
+                //On assign une valeur au tableau de retour de données en cas d'erreur du formulaire
+                $arrAddFormationEchec['isset_sNameFormation'] = $arrAddFormation['sNameFormation'];
             }
 
             /**
@@ -183,11 +187,8 @@
                 $noty[] = simply_notif('danger', "Aucun nom complet n'a été saisie !");
             //Sinon
             }else{
-                //On assign une valeur au tableau envoyer pour l'insertion en BDD
-                $arrAddFormation['lNameFormation'] = $arrAddFormation['lNameFormation'];
-                //Et on assigne le contenu de la variable POST "lNameFormation" dans "isset_lNameFormation" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-                
-                //$tpl->assign("isset_lNameFormation", $arrAddFormation['lNameFormation']);
+                //On assign une valeur au tableau de retour de données en cas d'erreur du formulaire
+                $arrAddFormationEchec['isset_lNameFormation'] = $arrAddFormation['lNameFormation'];
             }
 
             /**
@@ -199,11 +200,8 @@
                 $noty[] = simply_notif('danger', "Aucune description n'a été saisie !");
             //Sinon
             }else{
-                //On assign une valeur au tableau envoyer pour l'insertion en BDD
-                $arrAddFormation['descFormation'] = $arrAddFormation['descFormation'];
-                //Et on assigne le contenu de la variable POST "descFormation" dans "isset_descFormation" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-                
-                //$tpl->assign("isset_descFormation", $arrAddFormation['descFormation']);
+                //On assign une valeur au tableau de retour de données en cas d'erreur du formulaire
+                $arrAddFormationEchec['isset_descFormation'] = $arrAddFormation['descFormation'];
             }
 
             /**
@@ -215,11 +213,8 @@
                 $noty[] = simply_notif('danger', "Veuillez choisir un niveau diplomant !");
             //Sinon
             }else{
-                //On assign une valeur au tableau envoyer pour l'insertion en BDD
-                $arrAddFormation['levelFormation'] = $arrAddFormation['levelFormation'];
-                //Et on assigne le contenu de la variable POST "levelFormation" dans "levelFormation_selected" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-                
-                //$tpl->assign("levelFormation_selected", $arrAddFormation['levelFormation']);
+                //On assign une valeur au tableau de retour de données en cas d'erreur du formulaire
+                $arrAddFormationEchec['levelFormation_selected'] = $arrAddFormation['levelFormation'];
             }
 
             /**
@@ -231,11 +226,8 @@
                 $noty[] = simply_notif('danger', "Aucune date d'entrée n'a été saisie !");
             //Sinon
             }else{
-                //On assign une valeur au tableau envoyer pour l'insertion en BDD
-                $arrAddFormation['dInFormation'] = reformate_dat($arrAddFormation['dInFormation']);
-                //Et on assigne le contenu de la variable POST "dInFormation" dans "isset_dInFormation" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-                
-                //$tpl->assign("isset_dInFormation", $arrAddFormation['dInFormation']);
+                //On assign une valeur au tableau de retour de données en cas d'erreur du formulaire
+                $arrAddFormationEchec['isset_dInFormation'] = convert_date_USinFR($arrAddFormation['dInFormation']);
             }
 
             /**
@@ -247,11 +239,8 @@
                 $noty[] = simply_notif('danger', "Aucune date de fin n'a été saisie !");
             //Sinon
             }else{
-                //On assign une valeur au tableau envoyer pour l'insertion en BDD
-                $arrAddFormation['dOutFormation'] = reformate_dat($arrAddFormation['dOutFormation']);
-                //Et on assigne le contenu de la variable POST "dOutFormation" dans "isset_dOutFormation" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-
-                //$tpl->assign("isset_dOutFormation", $arrAddFormation['dOutFormation']);
+                //On assign une valeur au tableau de retour de données en cas d'erreur du formulaire
+                $arrAddFormationEchec['isset_dOutFormation'] = convert_date_USinFR($arrAddFormation['dOutFormation']);
             }
 
             /**
@@ -263,11 +252,8 @@
                 $noty[] = simply_notif('danger', "Aucun mode de formation choisie !");
             //Sinon
             }else{
-                //On assign une valeur au tableau envoyer pour l'insertion en BDD
-                $arrAddFormation['modeFormation'] = $arrAddFormation['modeFormation'];
-                //Et on assigne le contenu de la variable POST "modeFormation" dans "isset_modeFormation" pour un affichage du formulaire avec la donner envoyer en cas d'erreur
-
-                //$tpl->assign("isset_modeFormation", $arrAddFormation['modeFormation']);
+                //On assign une valeur au tableau de retour de données en cas d'erreur du formulaire
+                $arrAddFormationEchec['isset_modeFormation'] = $arrAddFormation['modeFormation'];
             }
 
             /**
@@ -276,14 +262,13 @@
             * Sinon message d'erreur "Une erreur est survenu"
             */
             if(!isset($noty)){
-                if($this->add_SQL_formation($arrAddFormation)){
-                    return $returnArray['noty'] = simply_notif('success', "Formation ajouter avec succès !", "center");
-                }else{
-
-                }
+                //if($this->add_SQL_formation($arrAddFormation)){
+                    $noty[] = simply_notif('success', "Formation ajouté avec succès !", "center");
+                    return $noty;
+                //}
             }else{
                 $returnArray['noty'] = $noty;
-                $returnArray['arrAddFormation'] = $arrAddFormation;
+                $returnArray['arrAddFormation'] = $arrAddFormationEchec;
                 return $returnArray;
             }
         }

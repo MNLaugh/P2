@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <TITLE>{$title} | {$Name}</TITLE>
+    <TITLE>{if isset($page)}{$pageName|capitalize} | {/if}{#title#}</TITLE>
     <!-- Favicon-->
-    <link rel="icon" href="ressources/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="ressources/images/GF-favicon.ico" type="image/x-icon">
     <!-- Google Fonts -->
     <link href="ressources/fonts/cyrillic.css" rel="stylesheet" type="text/css">
     <link href="ressources/materialIcones/material_icones.css" rel="stylesheet" type="text/css">

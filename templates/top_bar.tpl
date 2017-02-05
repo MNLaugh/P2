@@ -15,7 +15,8 @@
             <div class="navbar-header">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="./">{$title} |  DISII 2016/2017</a>
+                <div class="logo"><img src="./ressources/images/GF-logo_default.png" alt="Logo" /></div>
+                <a class="navbar-brand" href="./">{if isset($page)}{$pageName|capitalize} | {/if}{#title#}</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">

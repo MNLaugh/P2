@@ -1,26 +1,3 @@
-$(window).load(function(){
-    customAjax('pages/', 'p.index');
-   });
-function customAjax(url, name){
-    link = url + name + ".html";
-    $.ajax({url: link, success: function(result){
-        $("#global-container").html(result);
-    }});
-}
-function menu(page){
-    var ul = document.getElementById("global-menu");
-    var current = ul.getElementsByClassName("active");
-    $(current).removeClass("active");
-    if(page == "" || page == undefined){
-        page = "p.index"
-    }
-    var balise = document.getElementById(page);
-    var a = document.getElementById(page).parentElement;
-    $(a).addClass("active");
-    var url = balise.dataset;
-    url = url['url'];
-    customAjax(url, page);
-}
 $(function () {
     skinChanger();
     activateNotificationAndTasksScroll();

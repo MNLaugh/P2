@@ -44,7 +44,11 @@ $tpl->assign("left_menu", $menuQuery->html_menu($power));
 $page = (isset($_GET['p'])) ? $_GET['p'] : "accueil";
 //Transfert de la vue file d'arianne au template
 $tpl->assign("arianna", $menuQuery->html_arianna($page));
-//Transfert de la page à la vue
+
+$pageNameF = $page;
+//Initialisation de la variable nom de page visible à droite dans le navbar et dans le titre de l'onglet. 
+$tpl->assign("pageName", $pageNameF);
+//Transfert de la page à la vue.
 $tpl->assign("page", "templates/page/".$page);
 
 //perm au max (3)
@@ -69,24 +73,55 @@ switch ($page) {
 		*	 	Assignation des valeurs		*/
 		$tpl->assign("levelFormation_values", array("", "Bac +2", "Bac +3", "Bac +5"));
 		//		Assignation des textes d'otpions
-		$tpl->assign("levelFormation_output", array("-- Niveau diploment --", "Bac +2", "Bac +3", "Bac +5"));
+		$tpl->assign("levelFormation_output", array("-- Niveau diplomant --", "Bac +2", "Bac +3", "Bac +5"));
 		//		Assignation de l'option selected
-		$tpl->assign("levelFormation_selected", "");	
+		$tpl->assign("levelFormation_selected", "");
 
-		if(isset($_GET['op'])=='del' && isset($_GET['id'])){
-			if($formaQuery->delete_formation_by_id($_GET['id'])){
-				$noty[] = simply_notif('success', "Formation supprimer !");
-			}
+		$op = (isset($_GET['op']))? $_POST['op']: "list";
+		switch ($op) {
+			//Suppréssion d'une formation
+			case 'del':
+				//Si il existe un paramètre get id
+				if(isset($_GET['id'])){
+					//Et si la suppression retourne true
+					if($formaQuery->delete_formation_by_id($_GET['id'])){
+						//On affiche la notification de suppression effectuer
+						$noty[] = simply_notif('success', "Formation supprimer !");
+					}
+				}
+			break;
+
+			case 'view':
+				if(isset($_GET['id'])){
+
+				}
+			break;
+			default:
+				//Ajout d'une formation
+				if(isset($_POST['addFormation'])){
+					//On envoie tout les contenu du formulaire dans la fonction d'ajout de l'objet Formation
+					$addFormTab = $formaQuery->add_formation($_POST);
+					$tpl->assign("test", $addFormTab);
+					//On assigne notre ou nos erreurs à la variable "noty" pour afficher soit les erreur, soit le message de succès
+					$noty = (isset($addFormTab['noty']))? $addFormTab['noty']: $addFormTab;
+					//Si il existe un tableau "arrAddFormation" dans le rendu de la fonction
+					if(isset($addFormTab['arrAddFormation'])){
+						//On extrait les clefs du tableau pour pouvoir faire les assignation Smarty en cas d'erreur des données formulaire
+						$keysFormation = array_keys($addFormTab['arrAddFormation']);
+						//On boucle dessus affin de procéder au assignation
+						foreach($addFormTab['arrAddFormation'] as $i => $var){
+							//Et on procède au assignation Smarty
+							$tpl->assign($i, $addFormTab['arrAddFormation'][$i]);
+						}
+					}
+					if(count($noty)==1 && $noty['type']=='success'){
+						header("refresh;2:url=./?p=formation");
+					}
+				}
+				//Assigne le tableau des formation a la variable de vue "allFormation"
+				$tpl->assign("allFormation", $formaQuery->get_arr_formation());
+			break;
 		}
-
-		//Si l'utilisateur à envoyer le formulaire d'ajout d'une formation
-		if(isset($_POST['addFormation'])){
-			return $formaQuery->add_formation($_POST);
-			header("refresh;2:url=./?p=formation");
-		}
-
-		//Assigne le tableau des formation a la variable de vue "allFormation"
-		$tpl->assign("allFormation", $formaQuery->get_arr_formation());
 	break;
 	case 'stagiaire':
 		require_once('./classes/class.stag.php'); //Inclusion de la class stagiaire

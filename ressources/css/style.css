@@ -2337,7 +2337,9 @@
   .navbar .dropdown-menu {
     margin-left: -50px; }
   .navbar .js-right-sidebar {
-    margin-top: 15px; } }
+    margin-top: 15px;
+  }
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar > .container .navbar-brand,
@@ -7713,10 +7715,48 @@ html.ie11 .dropdown-menu ul.menu li a {
 
 html.ie11 .bs-searchbox .form-control {
   width: 90%; }
-
 .float-right {
   float: right;
 }
 .float-left {
   float: left;
+}
+
+/*\  -----  CUSTOM STYLE  ----- \*/
+.dataTables_filter {
+  float: right;
+}
+.logo {
+  width: 47px;
+  float: left;
+}
+.logo img {
+  width: 100%;
+  border-radius: 5px;
+}
+.navbar-brand {
+  float: left;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo {
+    margin-left: 3em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1169px) {
+  .logo {
+    margin-left: 3em;
+    margin-right: 1em;
+  }
+}
+@media (min-width: 1170px) {
+  .logo {
+    margin-left: 0em;
+    margin-right: 1em;
+  }
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-01-25 10:27:45
+/* Smarty version 3.1.30, created on 2017-02-03 19:39:31
   from "C:\xampp\htdocs\DISII\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58886f9173b783_85199476',
+  'unifunc' => 'content_5894ce63bfe258_43910939',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0424c771cf0bac9eab9d70a3432901821d5ac0bf' => 
     array (
       0 => 'C:\\xampp\\htdocs\\DISII\\templates\\header.tpl',
-      1 => 1485336460,
+      1 => 1486147170,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58886f9173b783_85199476 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5894ce63bfe258_43910939 (Smarty_Internal_Template $_smarty_tpl) {
+if (!is_callable('smarty_modifier_capitalize')) require_once 'C:\\xampp\\htdocs\\DISII\\smarties\\libs\\plugins\\modifier.capitalize.php';
 ?>
 <!DOCTYPE html>
 <HTML>
@@ -29,11 +30,13 @@ function content_58886f9173b783_85199476 (Smarty_Internal_Template $_smarty_tpl)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <TITLE><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
- | <?php echo $_smarty_tpl->tpl_vars['Name']->value;?>
+    <TITLE><?php if (isset($_smarty_tpl->tpl_vars['page']->value)) {
+echo smarty_modifier_capitalize($_smarty_tpl->tpl_vars['pageName']->value);?>
+ | <?php }
+echo $_smarty_tpl->smarty->ext->configLoad->_getConfigVariable($_smarty_tpl, 'title');?>
 </TITLE>
     <!-- Favicon-->
-    <link rel="icon" href="ressources/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="ressources/images/GF-favicon.ico" type="image/x-icon">
     <!-- Google Fonts -->
     <link href="ressources/fonts/cyrillic.css" rel="stylesheet" type="text/css">
     <link href="ressources/materialIcones/material_icones.css" rel="stylesheet" type="text/css">

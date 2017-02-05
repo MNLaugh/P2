@@ -1,13 +1,13 @@
     <!-- Jquery Core Js -->
     <script src="ressources/plugins/jquery/jquery.min.js"></script>
-    <!-- Waves Effect Plugin Js -->
-    <script src="ressources/plugins/node-waves/waves.js"></script>
     <!-- Bootstrap Core Js -->
     <script src="ressources/plugins/bootstrap/js/bootstrap.js"></script>
     <!-- Bootstrap Notify Plugin Js -->
     <script src="ressources/plugins/bootstrap-notify/bootstrap-notify.js"></script>
     <!-- Slimscroll Plugin Js -->
     <script src="ressources/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <!-- Waves Effect Plugin Js -->
+    <script src="ressources/plugins/node-waves/waves.js"></script>
     <!-- Dropzone Plugin Js -->
     <script src="ressources/plugins/dropzone/dropzone.js"></script>
     <!-- Jquery CountTo Plugin Js -->
@@ -54,6 +54,7 @@
     <script src="ressources/plugins/jquery-inputmask/inputmask/inputmask.js"></script>
     <script src="ressources/plugins/jquery-inputmask/inputmask/inputmask.date.extensions.js"></script>
 
+    <script src="ressources/js/pages/ui/tooltips-popovers.js"></script>
 
     <!-- Custom Js -->
     <script src="ressources/js/admin.js"></script>
