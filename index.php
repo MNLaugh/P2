@@ -114,8 +114,19 @@ switch ($page) {
 						}elseif($inInterval > 0 && $outInterval > 0){
 							$tpl->assign("textDate", "<h6>Formation terminée</h6>");
 						}else{
+							//calcul des jours passées
 							$daysPass = round((($inInterval/24)/60)/60);
+							//calcul des semaines passées
+							$daysWeekPass = round($daysPass/7)*2;
+							//recalcul des jour passer sans les weekend
+							$daysPass = $daysPass - $daysWeekPass;
+							//Calcul des jours restants
 							$daysFutur = round((($outInterval/24)/60)/60)*-1;
+							//Calcul des semaines restantes
+							$daysWeekFutur = round($daysFutur/7)*2;
+							//Recalcul des jours restants sans les weekend
+							$daysFutur = $daysFutur - $daysWeekFutur;
+
 							$dayTotal = $daysPass+$daysFutur;
 							$percent = ($daysPass*100)/$dayTotal;
 							$tpl->assign("progressBarForm", progress_bar($percent, $daysPass.' jours passés', $daysFutur.' jours restant'));
