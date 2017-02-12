@@ -1,11 +1,15 @@
 <?php
+include('class.user.php');
 
-    Class Stagiaire {
-
+    Class Stagiaire extends User{
+        
         private $db;
-        public function __construct($db){
-			$this->_db = $db;
-		}
+        
+        function __construct($db){
+            parent::__construct();
+        
+            $this->_db = $db;
+        }
 
         /**
          * Function qui retourne un tableau des formation

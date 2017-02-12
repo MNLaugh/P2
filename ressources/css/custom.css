@@ -1,0 +1,42 @@
+.dataTables_filter {
+  float: right;
+}
+.logo {
+  width: 47px;
+  float: left;
+}
+.logo img {
+  width: 100%;
+  border-radius: 5px;
+}
+.navbar-brand {
+  float: left;
+}
+
+#clink-formation {
+  text-decoration: unset;
+  color: #555;
+}
+}
+@media (max-width: 767px) {
+  .logo {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .logo {
+    margin-left: 3em;
+  }
+}
+@media (min-width: 992px) and (max-width: 1169px) {
+  .logo {
+    margin-left: 3em;
+    margin-right: 1em;
+  }
+}
+@media (min-width: 1170px) {
+  .logo {
+    margin-left: 0em;
+    margin-right: 1em;
+  }
+}

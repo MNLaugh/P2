@@ -7,7 +7,8 @@ ini_set('display_errors', 1);
 ini_set('log_errors', 1);
 // Nom du fichier qui enregistre les logs (attention aux droits à l'écriture)
 ini_set('error_log', 'cache/logs/error_php.txt');
-
+$nowDate = date('Y-m-d');
+$nowTimestamp = strtotime($nowDate);
 /*****  -Import des fonctions- && -Constantes-  *****\*/
 require_once('configs/func.php'); //Fonctions
 require_once('configs/const.php'); //Constantes
@@ -71,15 +72,17 @@ switch ($page) {
 		$tpl->assign("isset_modeFormation", null);
 		/*Création de l'objet select du formulaire d'ajout
 		*	 	Assignation des valeurs		*/
-		$tpl->assign("levelFormation_values", array("", "Bac +2", "Bac +3", "Bac +5"));
+		$level_list = get_level_list($db);
+
+		$tpl->assign("levelFormation_values", $level_list['value']);
 		//		Assignation des textes d'otpions
-		$tpl->assign("levelFormation_output", array("-- Niveau diplomant --", "Bac +2", "Bac +3", "Bac +5"));
+		$tpl->assign("levelFormation_output", $level_list['name']);
 		//		Assignation de l'option selected
 		$tpl->assign("levelFormation_selected", "");
 
-		$op = (isset($_GET['op']))? $_POST['op']: "list";
+		$op = (isset($_GET['op']))? $_GET['op']: "list";
 		switch ($op) {
-			//Suppréssion d'une formation
+			//Suppression d'une formation
 			case 'del':
 				//Si il existe un paramètre get id
 				if(isset($_GET['id'])){
@@ -87,21 +90,69 @@ switch ($page) {
 					if($formaQuery->delete_formation_by_id($_GET['id'])){
 						//On affiche la notification de suppression effectuer
 						$noty[] = simply_notif('success', "Formation supprimer !");
+						header('Refresh:2;url=./?p=formation');
 					}
 				}
 			break;
 
 			case 'view':
+				$tpl->assign("view", 1);
 				if(isset($_GET['id'])){
+					if($formaQuery->get_formation_by_id($_GET['id'])){
+						$once_form = $formaQuery->get_formation_by_id($_GET['id']);
+						$tpl->assign("uniq_form", $once_form);
+						//		Assignation de l'option selected
+						$tpl->assign("levelFormation_selected", $once_form['id_level']);
 
+						$inTimestamp = strtotime($once_form['date_in']);
+						$outTimestamp = strtotime($once_form['date_out']);
+						$inInterval = $nowTimestamp-$inTimestamp;
+						$outInterval = $nowTimestamp-$outTimestamp;
+
+						if($inInterval < 0 && $outInterval < 0){
+							$tpl->assign("textDate", "<h6>Formation à venir</h6>");
+						}elseif($inInterval > 0 && $outInterval > 0){
+							$tpl->assign("textDate", "<h6>Formation terminée</h6>");
+						}else{
+							$daysPass = round((($inInterval/24)/60)/60);
+							$daysFutur = round((($outInterval/24)/60)/60)*-1;
+							$dayTotal = $daysPass+$daysFutur;
+							$percent = ($daysPass*100)/$dayTotal;
+							$tpl->assign("progressBarForm", progress_bar($percent, $daysPass.' jours passés', $daysFutur.' jours restant'));
+						}
+
+						//Traitement update
+						if(isset($_POST['updateFormation'])){
+							//On envoie tout les contenu du formulaire dans la fonction d'ajout de l'objet Formation
+							$updateFormTab = $formaQuery->operating_formation($_POST, 'update');
+							$tpl->assign("test", $updateFormTab);
+							//On assigne notre ou nos erreurs à la variable "noty" pour afficher soit les erreur, soit le message de succès
+							$noty = (isset($addFormTab['noty']))? $updateFormTab['noty']: $updateFormTab;
+							//Si il existe un tableau "arrAddFormation" dans le rendu de la fonction
+							if(isset($updateFormTab['arrAddFormation'])){
+								//On extrait les clefs du tableau pour pouvoir faire les assignation Smarty en cas d'erreur des données formulaire
+								$keysFormation = array_keys($updateFormTab['arrAddFormation']);
+								//On boucle dessus affin de procéder au assignation
+								foreach($updateFormTab['arrAddFormation'] as $i => $var){
+									//Et on procède au assignation Smarty
+									$tpl->assign($i, $updateFormTab['arrAddFormation'][$i]);
+								}
+							}
+							if(count($noty)==1 && isset($noty['type'])=='success'){
+								header("refresh;2:url=" .$_SERVER['PHP_SELF']);
+							}
+						}
+					}
+				}else{
+					$noty[] = simply_notif('danger', "Aucune formation trouver !");
 				}
 			break;
 			default:
 				//Ajout d'une formation
 				if(isset($_POST['addFormation'])){
 					//On envoie tout les contenu du formulaire dans la fonction d'ajout de l'objet Formation
-					$addFormTab = $formaQuery->add_formation($_POST);
-					$tpl->assign("test", $addFormTab);
+					$addFormTab = $formaQuery->operating_formation($_POST, 'add');
+					$tpl->assign("test", $_POST);
 					//On assigne notre ou nos erreurs à la variable "noty" pour afficher soit les erreur, soit le message de succès
 					$noty = (isset($addFormTab['noty']))? $addFormTab['noty']: $addFormTab;
 					//Si il existe un tableau "arrAddFormation" dans le rendu de la fonction
@@ -114,7 +165,7 @@ switch ($page) {
 							$tpl->assign($i, $addFormTab['arrAddFormation'][$i]);
 						}
 					}
-					if(count($noty)==1 && $noty['type']=='success'){
+					if(count($noty)==1 && isset($noty['type'])=='success'){
 						header("refresh;2:url=./?p=formation");
 					}
 				}

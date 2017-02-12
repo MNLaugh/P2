@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-01 06:57:30
+/* Smarty version 3.1.30, created on 2017-02-11 20:31:36
   from "C:\wamp\www\DISII\templates\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_589178ca5dc151_76709214',
+  'unifunc' => 'content_589f66980e1290_74871686',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '04c5bae9da336d18b06b5e6e61262a6eba9f8b12' => 
     array (
       0 => 'C:\\wamp\\www\\DISII\\templates\\footer.tpl',
-      1 => 1485925982,
+      1 => 1486303116,
       2 => 'file',
     ),
   ),
@@ -20,15 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_589178ca5dc151_76709214 (Smarty_Internal_Template $_smarty_tpl) {
+function content_589f66980e1290_74871686 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <!-- Jquery Core Js -->
     <?php echo '<script'; ?>
  src="ressources/plugins/jquery/jquery.min.js"><?php echo '</script'; ?>
->
-    <!-- Waves Effect Plugin Js -->
-    <?php echo '<script'; ?>
- src="ressources/plugins/node-waves/waves.js"><?php echo '</script'; ?>
 >
     <!-- Bootstrap Core Js -->
     <?php echo '<script'; ?>
@@ -41,6 +37,10 @@ function content_589178ca5dc151_76709214 (Smarty_Internal_Template $_smarty_tpl)
     <!-- Slimscroll Plugin Js -->
     <?php echo '<script'; ?>
  src="ressources/plugins/jquery-slimscroll/jquery.slimscroll.js"><?php echo '</script'; ?>
+>
+    <!-- Waves Effect Plugin Js -->
+    <?php echo '<script'; ?>
+ src="ressources/plugins/node-waves/waves.js"><?php echo '</script'; ?>
 >
     <!-- Dropzone Plugin Js -->
     <?php echo '<script'; ?>
@@ -133,6 +133,21 @@ function content_589178ca5dc151_76709214 (Smarty_Internal_Template $_smarty_tpl)
     <?php echo '<script'; ?>
  src="ressources/plugins/jquery-datatable/extensions/export/buttons.print.min.js"><?php echo '</script'; ?>
 >
+
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-inputmask/jquery.inputmask.bundle.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-inputmask/inputmask/inputmask.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="ressources/plugins/jquery-inputmask/inputmask/inputmask.date.extensions.js"><?php echo '</script'; ?>
+>
+
+    <?php echo '<script'; ?>
+ src="ressources/js/pages/ui/tooltips-popovers.js"><?php echo '</script'; ?>
+>
+
     <!-- Custom Js -->
     <?php echo '<script'; ?>
  src="ressources/js/admin.js"><?php echo '</script'; ?>

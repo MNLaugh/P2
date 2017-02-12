@@ -23,6 +23,7 @@
     <link href="ressources/plugins/morrisjs/morris.css" rel="stylesheet" />
     <!-- Custom Css -->
     <link href="ressources/css/style.css" rel="stylesheet">
+    <link href="ressources/css/custom.css" rel="stylesheet">
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="ressources/css/themes/theme-indigo.min.css" rel="stylesheet" />
 </HEAD>

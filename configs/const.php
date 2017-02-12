@@ -2,7 +2,7 @@
 //------ MYSQL -------\\
 //Information de connection mysql
 define('DBHOST','127.0.0.1');
-define('DBNAME','disiip2');
+define('DBNAME','gestiform');
 define('DBUSER','root');
 define('DBPASS','');
 
@@ -12,10 +12,11 @@ $db = new PDO("mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS);
 $extension = '';
 $message = '';
 $nomImage = '';
-define('TARGET_UPLOAD', 'folder');	// Repertoire cible public timeline
-define('MAX_SIZE', 20000000);    // Taille max en octets du fichier
-define('WIDTH_MAX', 4000);    // Largeur max de l'image en pixels
-define('HEIGHT_MAX', 4000);    // Hauteur max de l'image en pixels
+define('TARGET_UPLOAD', './upld_image/');	// Repertoire cible public images
+define('TARGET_UPLOAD_THUMBS', './upld_image/thumbs/');	// Repertoire cible thumbails
+define('MAX_SIZE', 2000000);    // Taille max en octets du fichier
+define('WIDTH_MAX', 2000);    // Largeur max de l'image en pixels
+define('HEIGHT_MAX', 2000);    // Hauteur max de l'image en pixels
 // Tableaux de donnees
 $tabExt = array('JPG','jpg','gif','png','jpeg');    // Extensions autorisees
 $infosImg = array();
@@ -59,7 +60,11 @@ define('OKLOGIN', 'Succès! Connexion réussi!');
 //GOOD UPLOAD
 define('GOODUPLOAD', 'Succès! Image(s) upload avec succès!');
 //User add/del
-define('USERADDED', 'Succès! Utilisateur ajouter!');
+
+/*Success formation*/
+define('ADDFORMSUCCES', "Formation ajouté avec succès !");
+define('UPDATEFORMSUCCES', "Formation modifié avec succès !");
+
 define('USERUPDATED', 'Succès! Informations utilisateur modifier!');
 define('USERDELETED', 'Succès! Utilisateur supprimer!');
 ?>

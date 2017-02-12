@@ -45,25 +45,32 @@ function convert_date_FRinUS($dateFR){
 	return date("Y-m-d", strtotime($date));
 }
 
-/**
-*	Fonction qui retourne une chaine de caractère aléatoire
-*
-*	@param 	Int 		- Paramètre de longueur de la chaine
-*	@return String 		- Chaine de caractère
-*/
-function rand_string($length) {
-	//Initialise la variable "string"
-	$string = NULL;
-	//Déclaration de la variable contenant tous les caractères disponibles
-	$alpha = '0123456789abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ'; //60
-	//Boucle sur le nombre passé en paramètre
-	for ($i = 0; $i < $length; $i++) {
-		//On choisit un caractère de manière aléatoire dans "alpha"
-	    $n = rand(0, strlen($alpha)-1);
-	    //Concataine les caractères sélectionnés à chaque boucle
-	    $string .= $alpha[$n];
+function get_level_list($db){
+	try {
+		$stmt = $db->query('SET NAMES utf8');
+		$stmt = $db->query('SELECT * FROM level_diplome');
+		$level_list = $stmt->fetchAll();
+		$level_value = array("");
+		$level_name = array("-- Niveau diplomant --");
+		foreach ($level_list as $i => $val) {
+			$level_value[$i+1] = $val['id_level'];
+			$level_name[$i+1] = $val['level_name'];
+		}
+		$levelListFinal['value'] = $level_value;
+		$levelListFinal['name'] = $level_name;
+		return $levelListFinal;
+	} catch(PDOException $e) {
+		return false;
 	}
-	//On retourne notre chaine finale
-	return $string;
+}
+
+function progress_bar($percent, $daysPass, $daysFutur){
+	return '
+        <div class="progress">
+            <div class="progress-bar bg-teal progress-bar-striped" role="progressbar" aria-valuenow="'. $percent .'" aria-valuemin="0" aria-valuemax="100" style="width: '. $percent .'%">
+                '. $daysPass .'
+            </div>
+            <center>'. $daysFutur .'</center>
+        </div>';
 }
 ?>

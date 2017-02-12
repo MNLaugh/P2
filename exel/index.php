@@ -1,19 +1,24 @@
 <?php
 function array_by_excel($array, $caractExclusif){
 	$nbKey = 0;
+	$valArr = [];
 	foreach ($array as $ligne) {
 		//var_dump($ligne);
 		foreach ($ligne as $col) {
 			foreach ($col as $cell) {
-			if($cell != NULL && substr_count($cell, 'Colonne')==false){
-				$nbKey++;
-				if(substr_count($cell, $caractExclusif)==true){
-					$keyArr[] = str_replace(' ', '_', $cell);
-				}else{
-					$valArr[] = $cell;
+				if(substr_count($cell, 'Colonne')==false){
+					$nbKey++;
+					if(substr_count($cell, $caractExclusif)==true){
+						$keyArr[] = str_replace('key ', '', $cell);
+					}else{
+						if($cell == "coucou"){ $cell = ''; }
+						$valArr[] = $cell;
+					}
 				}
 			}
-		}
+			// echo "<pre>";
+			// var_dump($valArr);
+			// echo "</pre>";
 		}
 	}
 	//Déclare le tableau finale
@@ -68,14 +73,15 @@ function array_by_excel($array, $caractExclusif){
 }
 require_once 'Classes/PHPExcel/IOFactory.php';
 // Chargement du fichier Excel
-$excelFile = "sale.xlsx";
+$excelFile = "file_name.xlsx";
 $objReader = PHPExcel_IOFactory::createReader('Excel2007');
 $objPHPExcel = $objReader->load($excelFile);
 //Itrating through all the sheets in the excel workbook and storing the array data
 foreach ($objPHPExcel->getWorksheetIterator() as $worksheet) {
     $arrayData[$worksheet->getTitle()] = $worksheet->toArray();
 }
+
 echo '<pre>';
-echo array_by_excel($arrayData, "key") ."<br>";
+echo array_by_excel($arrayData, "key");
 echo '</pre>';
 ?>
