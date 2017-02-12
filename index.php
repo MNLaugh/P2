@@ -126,9 +126,11 @@ switch ($page) {
 							$daysWeekFutur = round($daysFutur/7)*2;
 							//Recalcul des jours restants sans les weekend
 							$daysFutur = $daysFutur - $daysWeekFutur;
-
+							//Total de jours de formation
 							$dayTotal = $daysPass+$daysFutur;
+							//Pourcentage passé
 							$percent = ($daysPass*100)/$dayTotal;
+							//Envoi au template avec la fonction de création de la progress bar
 							$tpl->assign("progressBarForm", progress_bar($percent, $daysPass.' jours passés', $daysFutur.' jours restant'));
 						}
 
