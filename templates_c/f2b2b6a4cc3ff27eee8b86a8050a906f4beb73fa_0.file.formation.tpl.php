@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-12 11:02:53
+/* Smarty version 3.1.30, created on 2017-02-13 01:43:49
   from "C:\wamp\www\DISII\templates\page\formation.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58a032cd7d8290_52716572',
+  'unifunc' => 'content_58a101454e1183_19316767',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f2b2b6a4cc3ff27eee8b86a8050a906f4beb73fa' => 
     array (
       0 => 'C:\\wamp\\www\\DISII\\templates\\page\\formation.tpl',
-      1 => 1486893771,
+      1 => 1486946628,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58a032cd7d8290_52716572 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58a101454e1183_19316767 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\wamp\\www\\DISII\\smarties\\libs\\plugins\\function.html_options.php';
 ?>
             <!-- Exportable Table -->
@@ -51,11 +51,7 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\wamp\\www\\D
                                             <div id="updateForm" class="body">
                                                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                                                     <h4><?php echo $_smarty_tpl->tpl_vars['uniq_form']->value['long_name'];?>
-&emsp;<?php if ($_smarty_tpl->tpl_vars['uniq_form']->value['mode'] == 0) {?>
-                                                        <span class="label bg-blue-grey">Continue</span>
-                                                    <?php } else { ?>
-                                                        <span class="label bg-grey">Alternance</span>
-                                                    <?php }?></h4>
+</h4>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                                                     <h4><?php echo $_smarty_tpl->tpl_vars['uniq_form']->value['short_name'];?>
@@ -64,6 +60,21 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\wamp\\www\\D
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                     <p><?php echo $_smarty_tpl->tpl_vars['uniq_form']->value['description'];?>
 </p>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2">
+                                                        <p>Type de formation : 
+                                                        <?php if ($_smarty_tpl->tpl_vars['uniq_form']->value['mode'] == 0) {?>
+                                                            <span class="label bg-blue-grey">Continue</span>
+                                                        <?php } else { ?>
+                                                            <span class="label bg-grey">Alternance</span>
+                                                        <?php }?>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2">    
+                                                        <p> Niveau diplomant : <span class="label bg-blue-grey"><?php echo $_smarty_tpl->tpl_vars['uniq_form']->value['level_name'];?>
+</span></p>
+                                                    </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2">
@@ -76,11 +87,8 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\wamp\\www\\D
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                    <?php if (isset($_smarty_tpl->tpl_vars['progressBarForm']->value)) {?>
-                                                        <?php echo $_smarty_tpl->tpl_vars['progressBarForm']->value;?>
-
-                                                    <?php } elseif (isset($_smarty_tpl->tpl_vars['textDat']->value)) {?>
-                                                        <?php echo $_smarty_tpl->tpl_vars['textDate']->value;?>
+                                                    <?php if (isset($_smarty_tpl->tpl_vars['DateContentFormation']->value)) {?>
+                                                        <?php echo $_smarty_tpl->tpl_vars['DateContentFormation']->value;?>
 
                                                     <?php }?>
                                                 </div>

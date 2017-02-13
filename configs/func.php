@@ -64,7 +64,7 @@ function get_level_list($db){
 	}
 }
 
-function progress_bar($percent, $daysPass, $daysFutur){
+function progress_bar($percent, $daysPass=null, $daysFutur=null){
 	return '
         <div class="progress">
             <div class="progress-bar bg-teal progress-bar-striped" role="progressbar" aria-valuenow="'. $percent .'" aria-valuemin="0" aria-valuemax="100" style="width: '. $percent .'%">

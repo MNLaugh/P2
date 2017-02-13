@@ -21,17 +21,27 @@
                                         <div role="tabpanel" class="tab-pane animated active" id="formation">
                                             <div id="updateForm" class="body">
                                                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                                    <h4>{$uniq_form.long_name}&emsp;{if $uniq_form.mode == 0}
-                                                        <span class="label bg-blue-grey">Continue</span>
-                                                    {else}
-                                                        <span class="label bg-grey">Alternance</span>
-                                                    {/if}</h4>
+                                                    <h4>{$uniq_form.long_name}</h4>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                                                     <h4>{$uniq_form.short_name}</h4>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                     <p>{$uniq_form.description}</p>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2">
+                                                        <p>Type de formation : 
+                                                        {if $uniq_form.mode == 0}
+                                                            <span class="label bg-blue-grey">Continue</span>
+                                                        {else}
+                                                            <span class="label bg-grey">Alternance</span>
+                                                        {/if}
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2">    
+                                                        <p> Niveau diplomant : <span class="label bg-blue-grey">{$uniq_form.level_name}</span></p>
+                                                    </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-2">
@@ -42,10 +52,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                                    {if isset($progressBarForm)}
-                                                        {$progressBarForm}
-                                                    {elseif isset($textDat)}
-                                                        {$textDate}
+                                                    {if isset($DateContentFormation)}
+                                                        {$DateContentFormation}
                                                     {/if}
                                                 </div>
                                             </div>

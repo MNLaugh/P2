@@ -108,11 +108,15 @@ switch ($page) {
 						$outTimestamp = strtotime($once_form['date_out']);
 						$inInterval = $nowTimestamp-$inTimestamp;
 						$outInterval = $nowTimestamp-$outTimestamp;
-
+						//les deux interval sont déjà passés
 						if($inInterval < 0 && $outInterval < 0){
-							$tpl->assign("textDate", "<h6>Formation à venir</h6>");
+							//Assignation au tpl
+							$tpl->assign("DateContentFormation", "<h6>Formation à venir</h6>");
+						//les deux interval sont à venir
 						}elseif($inInterval > 0 && $outInterval > 0){
-							$tpl->assign("textDate", "<h6>Formation terminée</h6>");
+							//Assignation au tpl
+							$tpl->assign("DateContentFormation", "<h6>Formation terminée</h6>");
+						//Sinon la formation est en cours
 						}else{
 							//calcul des jours passées
 							$daysPass = round((($inInterval/24)/60)/60);
@@ -131,7 +135,7 @@ switch ($page) {
 							//Pourcentage passé
 							$percent = ($daysPass*100)/$dayTotal;
 							//Envoi au template avec la fonction de création de la progress bar
-							$tpl->assign("progressBarForm", progress_bar($percent, $daysPass.' jours passés', $daysFutur.' jours restant'));
+							$tpl->assign("DateContentFormation", progress_bar($percent, $daysPass.' jours passés', $daysFutur.' jours restant'));
 						}
 
 						//Traitement update
