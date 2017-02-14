@@ -1,7 +1,7 @@
 {config_load file="global.conf" section="setup"}
 {include file="header.tpl" title=Manager}
-{include file="top_bar.tpl" title=Manager}
-{include file="left_bar.tpl"}
+{*include file="top_bar.tpl" title=Manager*}
+{*include file="left_bar.tpl"*}
 
     <section class="content">
         <div class="container-fluid">

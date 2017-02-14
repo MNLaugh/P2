@@ -7276,3 +7276,449 @@ Stack trace:
 [12-Feb-2017 10:49:36 Europe/Paris] PHP Notice:  Undefined variable: value in C:\wamp\www\DISII\index.php on line 118
 [12-Feb-2017 10:49:36 Europe/Paris] PHP Stack trace:
 [12-Feb-2017 10:49:36 Europe/Paris] PHP   1. {main}() C:\wamp\www\DISII\index.php:0
+[14-Feb-2017 08:20:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Base 'gestiform' inconnue' in C:\Wamp64\www\DISII\configs\const.php:9
+Stack trace:
+#0 C:\Wamp64\www\DISII\configs\const.php(9): PDO->__construct('mysql:host=127....', 'root', '')
+#1 C:\Wamp64\www\DISII\index.php(14): require_once('C:\\Wamp64\\www\\D...')
+#2 {main}
+  thrown in C:\Wamp64\www\DISII\configs\const.php on line 9
+[14-Feb-2017 08:21:30 UTC] PHP Notice:  Undefined index: menu_list in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 378
+[14-Feb-2017 08:21:30 UTC] PHP Stack trace:
+[14-Feb-2017 08:21:30 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:21:30 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:21:30 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:21:30 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:21:30 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:21:30 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:21:30 UTC] PHP   7. content_58a2be0a230184_06690345() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:21:30 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:48
+[14-Feb-2017 08:21:30 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:21:30 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:21:30 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:21:30 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:21:30 UTC] PHP Notice:  Undefined index: smarty in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 396
+[14-Feb-2017 08:21:30 UTC] PHP Stack trace:
+[14-Feb-2017 08:21:30 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:21:30 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:21:30 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:21:30 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:21:30 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:21:30 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:21:30 UTC] PHP   7. content_58a2be0a230184_06690345() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:21:30 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:48
+[14-Feb-2017 08:21:30 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:21:30 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:21:30 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:21:30 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:22:44 UTC] PHP Notice:  Undefined index: menu_list in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 378
+[14-Feb-2017 08:22:44 UTC] PHP Stack trace:
+[14-Feb-2017 08:22:44 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:22:44 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:22:44 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:22:44 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:22:44 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:22:44 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:22:44 UTC] PHP   7. content_58a2be0a230184_06690345() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:22:44 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:48
+[14-Feb-2017 08:22:44 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:22:44 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:22:44 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:22:44 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:22:44 UTC] PHP Notice:  Undefined index: smarty in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 396
+[14-Feb-2017 08:22:44 UTC] PHP Stack trace:
+[14-Feb-2017 08:22:44 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:22:44 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:22:44 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:22:44 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:22:44 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:22:44 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:22:44 UTC] PHP   7. content_58a2be0a230184_06690345() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:22:44 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:48
+[14-Feb-2017 08:22:44 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:22:44 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:22:44 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:22:44 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:23:36 UTC] PHP Notice:  Undefined index: isset_idtFormation in C:\Wamp64\www\DISII\templates_c\b9b08d717cf0d73fec2663eff4aeb518aa1eb1ca_0.file.formation.tpl.php on line 226
+[14-Feb-2017 08:23:36 UTC] PHP Stack trace:
+[14-Feb-2017 08:23:36 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:23:36 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:23:36 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:23:36 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:23:36 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:23:36 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:23:36 UTC] PHP   7. content_58a2be0a230184_06690345() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:23:36 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:48
+[14-Feb-2017 08:23:36 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:23:36 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:23:36 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:23:36 UTC] PHP  12. content_58a2be0cbef2a1_58045108() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:23:36 UTC] PHP Notice:  Trying to get property of non-object in C:\Wamp64\www\DISII\templates_c\b9b08d717cf0d73fec2663eff4aeb518aa1eb1ca_0.file.formation.tpl.php on line 226
+[14-Feb-2017 08:23:36 UTC] PHP Stack trace:
+[14-Feb-2017 08:23:36 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:23:36 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:23:36 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:23:36 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:23:36 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:23:36 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:23:36 UTC] PHP   7. content_58a2be0a230184_06690345() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:23:36 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:48
+[14-Feb-2017 08:23:36 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:23:36 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:23:36 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:23:36 UTC] PHP  12. content_58a2be0cbef2a1_58045108() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:24:42 UTC] PHP Notice:  Undefined index: menu_list in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 378
+[14-Feb-2017 08:24:42 UTC] PHP Stack trace:
+[14-Feb-2017 08:24:42 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:24:42 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:24:42 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:24:42 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:24:42 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:24:42 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:24:42 UTC] PHP   7. content_58a2be0a230184_06690345() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:24:42 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:48
+[14-Feb-2017 08:24:42 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:24:42 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:24:42 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:24:42 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:24:42 UTC] PHP Notice:  Undefined index: smarty in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 396
+[14-Feb-2017 08:24:42 UTC] PHP Stack trace:
+[14-Feb-2017 08:24:42 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:24:42 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:24:42 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:24:42 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:24:42 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:24:42 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:24:42 UTC] PHP   7. content_58a2be0a230184_06690345() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:24:42 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:48
+[14-Feb-2017 08:24:42 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:24:42 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:24:42 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:24:42 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:28:18 UTC] PHP Notice:  Undefined index: test in C:\Wamp64\www\DISII\templates_c\b9b08d717cf0d73fec2663eff4aeb518aa1eb1ca_0.file.formation.tpl.php on line 36
+[14-Feb-2017 08:28:18 UTC] PHP Stack trace:
+[14-Feb-2017 08:28:18 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:28:18 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:28:18 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:28:18 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:28:18 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:28:18 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:28:18 UTC] PHP   7. content_58a2be0a230184_06690345() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:28:18 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:48
+[14-Feb-2017 08:28:18 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:28:18 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:28:18 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:28:18 UTC] PHP  12. content_58a2bfa2a77d27_37922688() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:28:18 UTC] PHP Notice:  Trying to get property of non-object in C:\Wamp64\www\DISII\templates_c\b9b08d717cf0d73fec2663eff4aeb518aa1eb1ca_0.file.formation.tpl.php on line 36
+[14-Feb-2017 08:28:18 UTC] PHP Stack trace:
+[14-Feb-2017 08:28:18 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:28:18 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:28:18 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:28:18 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:28:18 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:28:18 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:28:18 UTC] PHP   7. content_58a2be0a230184_06690345() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:28:18 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:48
+[14-Feb-2017 08:28:18 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:28:18 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:28:18 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:28:18 UTC] PHP  12. content_58a2bfa2a77d27_37922688() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:28:20 UTC] PHP Notice:  Undefined index: test in C:\Wamp64\www\DISII\templates_c\b9b08d717cf0d73fec2663eff4aeb518aa1eb1ca_0.file.formation.tpl.php on line 36
+[14-Feb-2017 08:28:20 UTC] PHP Stack trace:
+[14-Feb-2017 08:28:20 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:28:20 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:28:20 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:28:20 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:28:20 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:28:20 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:28:20 UTC] PHP   7. content_58a2be0a230184_06690345() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:28:20 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:48
+[14-Feb-2017 08:28:20 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:28:20 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:28:20 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:28:20 UTC] PHP  12. content_58a2bfa2a77d27_37922688() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:28:20 UTC] PHP Notice:  Trying to get property of non-object in C:\Wamp64\www\DISII\templates_c\b9b08d717cf0d73fec2663eff4aeb518aa1eb1ca_0.file.formation.tpl.php on line 36
+[14-Feb-2017 08:28:20 UTC] PHP Stack trace:
+[14-Feb-2017 08:28:20 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:28:20 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:28:20 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:28:20 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:28:20 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:28:20 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:28:20 UTC] PHP   7. content_58a2be0a230184_06690345() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:28:20 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:48
+[14-Feb-2017 08:28:20 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:28:20 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:28:20 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:28:20 UTC] PHP  12. content_58a2bfa2a77d27_37922688() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:43:33 UTC] PHP Notice:  Undefined index: menu_list in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 378
+[14-Feb-2017 08:43:33 UTC] PHP Stack trace:
+[14-Feb-2017 08:43:33 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:43:33 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:43:33 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:43:33 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:43:33 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:43:33 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:43:33 UTC] PHP   7. content_58a2c006b99906_10504408() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:43:33 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:42
+[14-Feb-2017 08:43:33 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:43:33 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:43:33 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:43:33 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:43:33 UTC] PHP Notice:  Undefined index: smarty in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 396
+[14-Feb-2017 08:43:33 UTC] PHP Stack trace:
+[14-Feb-2017 08:43:33 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:43:33 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:43:33 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:43:33 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:43:33 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:43:33 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:43:33 UTC] PHP   7. content_58a2c006b99906_10504408() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:43:33 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:42
+[14-Feb-2017 08:43:33 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:43:33 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:43:33 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:43:33 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:54:40 UTC] PHP Notice:  Undefined index: menu_list in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 378
+[14-Feb-2017 08:54:40 UTC] PHP Stack trace:
+[14-Feb-2017 08:54:40 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:54:40 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:54:40 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:54:40 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:54:40 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:54:40 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:54:40 UTC] PHP   7. content_58a2c006b99906_10504408() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:54:40 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:42
+[14-Feb-2017 08:54:40 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:54:40 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:54:40 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:54:40 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:54:40 UTC] PHP Notice:  Undefined index: smarty in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 396
+[14-Feb-2017 08:54:40 UTC] PHP Stack trace:
+[14-Feb-2017 08:54:40 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 08:54:40 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:221
+[14-Feb-2017 08:54:40 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 08:54:40 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 08:54:40 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:54:40 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:54:40 UTC] PHP   7. content_58a2c006b99906_10504408() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:54:40 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:42
+[14-Feb-2017 08:54:40 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 08:54:40 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 08:54:40 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 08:54:40 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 08:56:22 UTC] PHP Fatal error:  Uncaught  --> Smarty: Unable to load template 'file:templates/page/.tpl' in 'index.tpl' <-- 
+  thrown in C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php on line 163
+[14-Feb-2017 10:34:41 UTC] PHP Notice:  Undefined index: menu_list in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 378
+[14-Feb-2017 10:34:41 UTC] PHP Stack trace:
+[14-Feb-2017 10:34:41 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:34:41 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:224
+[14-Feb-2017 10:34:41 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 10:34:41 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 10:34:41 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 10:34:41 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 10:34:41 UTC] PHP   7. content_58a2c006b99906_10504408() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 10:34:41 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:42
+[14-Feb-2017 10:34:41 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 10:34:41 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 10:34:41 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 10:34:41 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 10:34:41 UTC] PHP Notice:  Undefined index: smarty in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 396
+[14-Feb-2017 10:34:41 UTC] PHP Stack trace:
+[14-Feb-2017 10:34:41 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:34:41 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:224
+[14-Feb-2017 10:34:41 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 10:34:41 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 10:34:41 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 10:34:41 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 10:34:41 UTC] PHP   7. content_58a2c006b99906_10504408() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 10:34:41 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:42
+[14-Feb-2017 10:34:41 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 10:34:41 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 10:34:41 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 10:34:41 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 10:35:04 UTC] PHP Notice:  Undefined index: menu_list in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 378
+[14-Feb-2017 10:35:04 UTC] PHP Stack trace:
+[14-Feb-2017 10:35:04 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:35:04 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:224
+[14-Feb-2017 10:35:04 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 10:35:04 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 10:35:04 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 10:35:04 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 10:35:04 UTC] PHP   7. content_58a2c006b99906_10504408() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 10:35:04 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:42
+[14-Feb-2017 10:35:04 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 10:35:04 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 10:35:04 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 10:35:04 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 10:35:04 UTC] PHP Notice:  Undefined index: smarty in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 396
+[14-Feb-2017 10:35:04 UTC] PHP Stack trace:
+[14-Feb-2017 10:35:04 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:35:04 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:224
+[14-Feb-2017 10:35:04 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 10:35:04 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 10:35:04 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 10:35:04 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 10:35:04 UTC] PHP   7. content_58a2c006b99906_10504408() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 10:35:04 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:42
+[14-Feb-2017 10:35:04 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 10:35:04 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 10:35:04 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 10:35:04 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 10:38:42 UTC] PHP Notice:  Undefined index: menu_list in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 378
+[14-Feb-2017 10:38:42 UTC] PHP Stack trace:
+[14-Feb-2017 10:38:42 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:38:42 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:225
+[14-Feb-2017 10:38:42 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 10:38:42 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 10:38:42 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 10:38:42 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 10:38:42 UTC] PHP   7. content_58a2c006b99906_10504408() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 10:38:42 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:42
+[14-Feb-2017 10:38:42 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 10:38:42 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 10:38:42 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 10:38:42 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 10:38:42 UTC] PHP Notice:  Undefined index: smarty in C:\Wamp64\www\DISII\templates_c\1b681ada3faab9b524c9c5759ae59f622c90b757_0.file.accueil.tpl.php on line 396
+[14-Feb-2017 10:38:42 UTC] PHP Stack trace:
+[14-Feb-2017 10:38:42 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:38:42 UTC] PHP   2. Smarty_Internal_TemplateBase->display() C:\Wamp64\www\DISII\index.php:225
+[14-Feb-2017 10:38:42 UTC] PHP   3. Smarty_Internal_TemplateBase->_execute() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:114
+[14-Feb-2017 10:38:42 UTC] PHP   4. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_templatebase.php:199
+[14-Feb-2017 10:38:42 UTC] PHP   5. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 10:38:42 UTC] PHP   6. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 10:38:42 UTC] PHP   7. content_58a2c006b99906_10504408() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 10:38:42 UTC] PHP   8. Smarty_Internal_Template->_subTemplateRender() C:\Wamp64\www\DISII\templates_c\52f75d918767956e1421011779ef310abdb44174_0.file.index.tpl.php:42
+[14-Feb-2017 10:38:42 UTC] PHP   9. Smarty_Internal_Template->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:350
+[14-Feb-2017 10:38:42 UTC] PHP  10. Smarty_Template_Compiled->render() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_internal_template.php:184
+[14-Feb-2017 10:38:42 UTC] PHP  11. Smarty_Template_Resource_Base->getRenderedTemplateCode() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_compiled.php:170
+[14-Feb-2017 10:38:42 UTC] PHP  12. content_58a2be0a6b36c0_01637470() C:\Wamp64\www\DISII\smarties\libs\sysplugins\smarty_template_resource_base.php:128
+[14-Feb-2017 10:46:32 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 107
+[14-Feb-2017 10:46:32 UTC] PHP Stack trace:
+[14-Feb-2017 10:46:32 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:46:32 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:46:32 UTC] PHP   3. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:328
+[14-Feb-2017 10:46:32 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 108
+[14-Feb-2017 10:46:32 UTC] PHP Stack trace:
+[14-Feb-2017 10:46:32 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:46:32 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:46:32 UTC] PHP   3. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:328
+[14-Feb-2017 10:46:32 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 109
+[14-Feb-2017 10:46:32 UTC] PHP Stack trace:
+[14-Feb-2017 10:46:32 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:46:32 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:46:32 UTC] PHP   3. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:328
+[14-Feb-2017 10:46:32 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 110
+[14-Feb-2017 10:46:32 UTC] PHP Stack trace:
+[14-Feb-2017 10:46:32 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:46:32 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:46:32 UTC] PHP   3. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:328
+[14-Feb-2017 10:46:32 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 111
+[14-Feb-2017 10:46:32 UTC] PHP Stack trace:
+[14-Feb-2017 10:46:32 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:46:32 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:46:32 UTC] PHP   3. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:328
+[14-Feb-2017 10:46:32 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 112
+[14-Feb-2017 10:46:32 UTC] PHP Stack trace:
+[14-Feb-2017 10:46:32 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:46:32 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:46:32 UTC] PHP   3. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:328
+[14-Feb-2017 10:46:32 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 113
+[14-Feb-2017 10:46:32 UTC] PHP Stack trace:
+[14-Feb-2017 10:46:32 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:46:32 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:46:32 UTC] PHP   3. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:328
+[14-Feb-2017 10:53:00 UTC] PHP Notice:  Undefined index: id_formation in C:\Wamp64\www\DISII\classes\class.forma.php on line 164
+[14-Feb-2017 10:53:00 UTC] PHP Stack trace:
+[14-Feb-2017 10:53:00 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:53:00 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:53:00 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:329
+[14-Feb-2017 10:53:00 UTC] PHP Fatal error:  Call to a member function fetch() on boolean in C:\Wamp64\www\DISII\classes\class.forma.php on line 53
+[14-Feb-2017 10:53:00 UTC] PHP Stack trace:
+[14-Feb-2017 10:53:00 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:53:00 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:53:00 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:329
+[14-Feb-2017 10:53:00 UTC] PHP   4. Formations->get_once_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:164
+[14-Feb-2017 10:53:42 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 107
+[14-Feb-2017 10:53:42 UTC] PHP Stack trace:
+[14-Feb-2017 10:53:42 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:53:42 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:53:42 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:329
+[14-Feb-2017 10:53:42 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:165
+[14-Feb-2017 10:53:42 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 108
+[14-Feb-2017 10:53:42 UTC] PHP Stack trace:
+[14-Feb-2017 10:53:42 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:53:42 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:53:42 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:329
+[14-Feb-2017 10:53:42 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:165
+[14-Feb-2017 10:53:42 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 109
+[14-Feb-2017 10:53:42 UTC] PHP Stack trace:
+[14-Feb-2017 10:53:42 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:53:42 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:53:42 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:329
+[14-Feb-2017 10:53:42 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:165
+[14-Feb-2017 10:53:42 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 110
+[14-Feb-2017 10:53:42 UTC] PHP Stack trace:
+[14-Feb-2017 10:53:42 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:53:42 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:53:42 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:329
+[14-Feb-2017 10:53:42 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:165
+[14-Feb-2017 10:53:42 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 111
+[14-Feb-2017 10:53:42 UTC] PHP Stack trace:
+[14-Feb-2017 10:53:42 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:53:42 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:53:42 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:329
+[14-Feb-2017 10:53:42 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:165
+[14-Feb-2017 10:53:42 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 112
+[14-Feb-2017 10:53:42 UTC] PHP Stack trace:
+[14-Feb-2017 10:53:42 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:53:42 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:53:42 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:329
+[14-Feb-2017 10:53:42 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:165
+[14-Feb-2017 10:53:42 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 113
+[14-Feb-2017 10:53:42 UTC] PHP Stack trace:
+[14-Feb-2017 10:53:42 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:53:42 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:53:42 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:329
+[14-Feb-2017 10:53:42 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:165
+[14-Feb-2017 10:54:44 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 108
+[14-Feb-2017 10:54:44 UTC] PHP Stack trace:
+[14-Feb-2017 10:54:44 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:54:44 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:54:44 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:330
+[14-Feb-2017 10:54:44 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:166
+[14-Feb-2017 10:54:44 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 109
+[14-Feb-2017 10:54:44 UTC] PHP Stack trace:
+[14-Feb-2017 10:54:44 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:54:44 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:54:44 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:330
+[14-Feb-2017 10:54:44 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:166
+[14-Feb-2017 10:54:44 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 110
+[14-Feb-2017 10:54:44 UTC] PHP Stack trace:
+[14-Feb-2017 10:54:44 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:54:44 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:54:44 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:330
+[14-Feb-2017 10:54:44 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:166
+[14-Feb-2017 10:54:44 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 111
+[14-Feb-2017 10:54:44 UTC] PHP Stack trace:
+[14-Feb-2017 10:54:44 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:54:44 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:54:44 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:330
+[14-Feb-2017 10:54:44 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:166
+[14-Feb-2017 10:54:44 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 112
+[14-Feb-2017 10:54:44 UTC] PHP Stack trace:
+[14-Feb-2017 10:54:44 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:54:44 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:54:44 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:330
+[14-Feb-2017 10:54:44 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:166
+[14-Feb-2017 10:54:44 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 113
+[14-Feb-2017 10:54:44 UTC] PHP Stack trace:
+[14-Feb-2017 10:54:44 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:54:44 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:54:44 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:330
+[14-Feb-2017 10:54:44 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:166
+[14-Feb-2017 10:54:44 UTC] PHP Notice:  Undefined variable: arrAddFormation in C:\Wamp64\www\DISII\classes\class.forma.php on line 114
+[14-Feb-2017 10:54:44 UTC] PHP Stack trace:
+[14-Feb-2017 10:54:44 UTC] PHP   1. {main}() C:\Wamp64\www\DISII\index.php:0
+[14-Feb-2017 10:54:44 UTC] PHP   2. Formations->operating_formation() C:\Wamp64\www\DISII\index.php:146
+[14-Feb-2017 10:54:44 UTC] PHP   3. Formations->update_by_id_formation() C:\Wamp64\www\DISII\classes\class.forma.php:330
+[14-Feb-2017 10:54:44 UTC] PHP   4. Formations->update_SQL_formation() C:\Wamp64\www\DISII\classes\class.forma.php:166

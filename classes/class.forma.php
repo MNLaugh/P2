@@ -101,17 +101,18 @@
          * @return boolean       - true si tout c'est bien passer
          */
         private function update_SQL_formation($arrUpdateFormation){
+            var_dump($arrUpdateFormation);
             try{
-                $stmt = $this->_db->prepare('UPDATE formations SET short_name=?, long_name=?, description=?, level_down=?, date_in=?, date_out=?, mode=? WHERE id_formation=?');
+                $stmt = $this->_db->prepare('UPDATE formations SET short_name=:short_name, long_name=:long_name, description=:description, level_down=:level_down, date_in=:date_in, date_out=:date_out, mode=:mode WHERE id_formation=:id_formation');
                 $stmt->execute(array(
-                    $arrUpdateFormation['sNameFormation'],
-                    $arrUpdateFormation['lNameFormation'],
-                    $arrUpdateFormation['descFormation'],
-                    $arrUpdateFormation['levelFormation'],
-                    convert_date_FRinUS($arrUpdateFormation['dInFormation']),
-                    convert_date_FRinUS($arrUpdateFormation['dOutFormation']),
-                    $arrUpdateFormation['modeFormation'],
-                    $arrUpdateFormation['idFormation']
+                    ':short_name' => $arrUpdateFormation['sNameFormation'],
+                    ':long_name' => $arrUpdateFormation['lNameFormation'],
+                    ':description' => $arrUpdateFormation['descFormation'],
+                    ':level_down' => intval($arrUpdateFormation['levelFormation']),
+                    ':date_in' => convert_date_FRinUS($arrUpdateFormation['dInFormation']),
+                    ':date_out' => convert_date_FRinUS($arrUpdateFormation['dOutFormation']),
+                    ':mode' => intval($arrUpdateFormation['modeFormation']),
+                    ':id_formation' => $arrUpdateFormation['idFormation']
                     ));
                 return true;
             } catch(PDOException $e) {
@@ -161,7 +162,7 @@
          * @return boolean       - true si tout c'est bien passer
          */
         private function update_by_id_formation($arrUpdateFormation){
-            if($this->get_once_by_id_formation($arrUpdateFormation['id_formation'])){
+            if($this->get_once_by_id_formation($arrUpdateFormation['idFormation'])){
                 return $this->update_SQL_formation($arrUpdateFormation);
             }else{
                 return false;
@@ -253,7 +254,7 @@
             //Sinon
             }else{
                 //Convertion date FR en US
-                $inDateFormation = convert_date_USinFR($arrAddFormation['dInFormation']);
+                $inDateFormation = convert_date_FRinUS($arrAddFormation['dInFormation']);
                 //On assign une valeur au tableau de retour de données en cas d'erreur du formulaire
                 $arrAddFormationEchec['isset_dInFormation'] = $inDateFormation;
                 //Convertion de date en timestamp
@@ -270,7 +271,7 @@
             //Sinon
             }else{
                 //Convertion date FR en US
-                $outDateFormation = convert_date_USinFR($arrAddFormation['dOutFormation']);
+                $outDateFormation = convert_date_FRinUS($arrAddFormation['dOutFormation']);
                 //On assign une valeur au tableau de retour de données en cas d'erreur du formulaire
                 $arrAddFormationEchec['isset_dOutFormation'] = $outDateFormation;
                 //Convertion de date en timestamp
@@ -279,6 +280,7 @@
 
             //Vérification des date in et out ** Si les timestamp existe
             if(isset($inTimestamp) && isset($outTimestamp)){
+                //Si la date de début est plus récente que la date de fin alors on renvoi une erreur
                 if(!($inTimestamp < $outTimestamp)){
                     $noty[] = simply_notif('danger', "Date de début est supérieur à la date de fin !");
                 }
@@ -311,7 +313,6 @@
                     $arrAddFormationEchec['isset_idFormation'] = $arrAddFormation['idFormation'];
                 }
             }
-
             /**
             *   Envoie final à la classe pour insertion en BDD
             * Si il n'existe pas d'erreurs et si la fonction d'ajout en base de donnée retourne true on assigne le message de succès
@@ -324,7 +325,7 @@
                         return $noty;
                     }
                 }elseif($operation=="update"){
-                    if($this->update_SQL_formation($arrAddFormation)){
+                    if($this->update_by_id_formation($arrAddFormation)){
                         $noty[] = simply_notif('success', UPDATEFORMSUCCES, "center");
                         return $noty;
                     }

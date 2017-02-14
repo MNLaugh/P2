@@ -1,6 +1,7 @@
 <?php
 ob_start();
 session_start();
+var_dump($_SERVER);
 // Afficher les erreurs à l'écran
 ini_set('display_errors', 1);
 // Enregistrer les erreurs dans un fichier de log
@@ -98,14 +99,16 @@ switch ($page) {
 			case 'view':
 				$tpl->assign("view", 1);
 				if(isset($_GET['id'])){
-					if($formaQuery->get_formation_by_id($_GET['id'])){
-						$once_form = $formaQuery->get_formation_by_id($_GET['id']);
+					$idInSet = $_GET['id'];
+					if($formaQuery->get_formation_by_id($idInSet)){
+						$once_form = $formaQuery->get_formation_by_id($idInSet);
 						$tpl->assign("uniq_form", $once_form);
 						//		Assignation de l'option selected
 						$tpl->assign("levelFormation_selected", $once_form['id_level']);
 
 						$inTimestamp = strtotime($once_form['date_in']);
 						$outTimestamp = strtotime($once_form['date_out']);
+
 						$inInterval = $nowTimestamp-$inTimestamp;
 						$outInterval = $nowTimestamp-$outTimestamp;
 						//les deux interval sont déjà passés
@@ -119,15 +122,15 @@ switch ($page) {
 						//Sinon la formation est en cours
 						}else{
 							//calcul des jours passées
-							$daysPass = round((($inInterval/24)/60)/60);
+							$daysPass = ceil((($inInterval/24)/60)/60);
 							//calcul des semaines passées
-							$daysWeekPass = round($daysPass/7)*2;
+							$daysWeekPass = ceil(($daysPass/7)*2);
 							//recalcul des jour passer sans les weekend
 							$daysPass = $daysPass - $daysWeekPass;
 							//Calcul des jours restants
-							$daysFutur = round((($outInterval/24)/60)/60)*-1;
+							$daysFutur = ceil((($outInterval/24)/60)/60)*-1;
 							//Calcul des semaines restantes
-							$daysWeekFutur = round($daysFutur/7)*2;
+							$daysWeekFutur = ceil(($daysFutur/7)*2);
 							//Recalcul des jours restants sans les weekend
 							$daysFutur = $daysFutur - $daysWeekFutur;
 							//Total de jours de formation
@@ -142,7 +145,13 @@ switch ($page) {
 						if(isset($_POST['updateFormation'])){
 							//On envoie tout les contenu du formulaire dans la fonction d'ajout de l'objet Formation
 							$updateFormTab = $formaQuery->operating_formation($_POST, 'update');
+							var_dump($updateFormTab);
 							$tpl->assign("test", $updateFormTab);
+
+							if(count($updateFormTab)==1 && $updateFormTab[0]['type']=='success'){
+								header("refresh:1;url=" .$_SERVER['PHP_SELF'] ."?p=formation&op=view&id=". $idInSet);
+							}
+
 							//On assigne notre ou nos erreurs à la variable "noty" pour afficher soit les erreur, soit le message de succès
 							$noty = (isset($addFormTab['noty']))? $updateFormTab['noty']: $updateFormTab;
 							//Si il existe un tableau "arrAddFormation" dans le rendu de la fonction
@@ -154,9 +163,6 @@ switch ($page) {
 									//Et on procède au assignation Smarty
 									$tpl->assign($i, $updateFormTab['arrAddFormation'][$i]);
 								}
-							}
-							if(count($noty)==1 && isset($noty['type'])=='success'){
-								header("refresh;2:url=" .$_SERVER['PHP_SELF']);
 							}
 						}
 					}
