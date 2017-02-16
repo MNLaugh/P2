@@ -16,14 +16,7 @@
 		 	try {
 				$stmt = $this->_db->query('SET NAMES utf8');
 				$stmt = $this->_db->query(
-                    'SELECT id_formation, short_name, long_name, description, level_name, date_in, date_out, mode,
-                           CASE
-                             WHEN EXISTS (SELECT *
-                                          FROM   image
-                                          WHERE  image.id_image = formations.id_image) THEN "image trouver"
-                             ELSE id_image
-                           END AS "image non trouver"
-                    FROM formations, level_diplome WHERE level_down = id_level'
+                    'SELECT id_formation, short_name, long_name, description, level_name, date_in, date_out, mode FROM formations, level_diplome WHERE level_down = id_level'
                 );
 				$listFormations = $stmt->fetchAll();
 			 	return $listFormations;
@@ -41,20 +34,11 @@
             try {
                 $stmt = $this->_db->query('SET NAMES utf8');
                 $stmt = $this->_db->query(
-                    'SELECT id_formation, short_name, long_name, description, date_in, date_out, mode, id_level, level_name,
-                           CASE
-                             WHEN EXISTS (SELECT *
-                                          FROM   image
-                                          WHERE  image.id_image = formations.id_image) THEN id_image
-                             ELSE id_image
-                           END AS "image"
-
-                    FROM formations, level_diplome WHERE id_formation = '. $idFormation .' AND level_diplome.id_level = formations.level_down');
+                    'SELECT id_formation, short_name, long_name, description, date_in, date_out, mode, id_level, level_name FROM formations, level_diplome WHERE id_formation = '. $idFormation .' AND level_diplome.id_level = formations.level_down');
                 $listFormations = $stmt->fetch();
                 return $listFormations;
             } catch(PDOException $e) {
                 return false;
-                //echo '<p class="error">'.$e->getMessage().'</p>';
             }
         }
 
@@ -74,7 +58,7 @@
          */
         private function add_SQL_formation($arrAddFormation){
             try{
-                $stmt = $this->_db->prepare('INSERT INTO formations (short_name, long_name, description, level_down, date_in, date_out, mode, id_image) VALUES (:short_name, :long_name, :description, :level_down, :date_in, :date_out, :mode, :id_image)');
+                $stmt = $this->_db->prepare('INSERT INTO formations (short_name, long_name, description, level_down, date_in, date_out, mode) VALUES (:short_name, :long_name, :description, :level_down, :date_in, :date_out, :mode)');
                 $stmt->execute(array(
                     ':short_name' => $arrAddFormation['sNameFormation'],
                     ':long_name' => $arrAddFormation['lNameFormation'],
@@ -82,13 +66,10 @@
                     ':level_down' => intval($arrAddFormation['levelFormation']),
                     ':date_in' => convert_date_FRinUS($arrAddFormation['dInFormation']),
                     ':date_out' => convert_date_FRinUS($arrAddFormation['dOutFormation']),
-                    ':mode' => intval($arrAddFormation['modeFormation']),
-                    ':id_image' => 0
+                    ':mode' => intval($arrAddFormation['modeFormation'])
                     ));
                 return true;
             } catch(PDOException $e) {
-                //fonction erreur
-                //echo '<p class="error">'.$e->getMessage().'</p>';
                 return false;
             }
         }
@@ -133,8 +114,6 @@
                 $stmt->execute();
                 return true;
             } catch(PDOException $e) {
-                //fonction erreur
-                //echo '<p class="error">'.$e->getMessage().'</p>';
                 return false;
             }
         }
@@ -142,7 +121,7 @@
         /**
          * Fonction de suppression d'une formation
          *
-         * @param Int $idFormation    - Identifiant de la formation à supprimer
+         * @param Int $idFormation          - Identifiant de la formation à supprimer
          * @return Boolean                  - renvoi "true" si tout c'est bien passer
          */
         public function delete_formation_by_id($idFormation){
@@ -154,13 +133,14 @@
         }
 
         /**
-         * Function qui met à jour les information d'une formation en BDD
+         * Function qui met à jour les informations d'une formation en BDD
          *
-         * @param Array $arrUpdateFormation        - Tableau des valeurs mis à jour
+         * @param Array $arrUpdateFormation         - Tableau des valeurs mis à jour
          *
-         * @return boolean       - true si tout c'est bien passer
+         * @return boolean                          - true si tout c'est bien passer
          */
         private function update_by_id_formation($arrUpdateFormation){
+            //Vérifi l'existance de la formation à mettre à jour
             if($this->get_once_by_id_formation($arrUpdateFormation['id_formation'])){
                 return $this->update_SQL_formation($arrUpdateFormation);
             }else{
@@ -256,7 +236,7 @@
                 $inDateFormation = convert_date_USinFR($arrAddFormation['dInFormation']);
                 //On assign une valeur au tableau de retour de données en cas d'erreur du formulaire
                 $arrAddFormationEchec['isset_dInFormation'] = $inDateFormation;
-                //Convertion de date en timestamp
+                //Convertion de date en timestamp pour futur vérification (Line:264)
                 $inTimestamp = strtotime($inDateFormation);
             }
 
@@ -273,13 +253,15 @@
                 $outDateFormation = convert_date_USinFR($arrAddFormation['dOutFormation']);
                 //On assign une valeur au tableau de retour de données en cas d'erreur du formulaire
                 $arrAddFormationEchec['isset_dOutFormation'] = $outDateFormation;
-                //Convertion de date en timestamp
+                //Convertion de date en timestamp pour futur vérification (Line:264)
                 $outTimestamp = strtotime($outDateFormation);
             }
 
             //Vérification des date in et out ** Si les timestamp existe
             if(isset($inTimestamp) && isset($outTimestamp)){
+                //Si le timestamp d'entré n'est pas inférieur à celui de la sortie (Si la date d'entré en formation est plus récente que la date de fin de formation)
                 if(!($inTimestamp < $outTimestamp)){
+                    //On envoi une erreur
                     $noty[] = simply_notif('danger', "Date de début est supérieur à la date de fin !");
                 }
             }
@@ -318,20 +300,32 @@
             * Sinon message d'erreur "Une erreur est survenu"
             */
             if(!isset($noty)){
+                //Si l'opération est un ajout
                 if($operation=="add"){
+                    //Si la fonction d'ajout return true
                     if($this->add_SQL_formation($arrAddFormation)){
+                        //On ajoute un message de succès à "$noty"
                         $noty[] = simply_notif('success', ADDFORMSUCCES, "center");
+                        //Et on retourne '$noty'
                         return $noty;
                     }
+                //sinon si l'opération est une mise à jour d'information
                 }elseif($operation=="update"){
+                    //Si la fonction de mise à jour return true
                     if($this->update_SQL_formation($arrAddFormation)){
+                        //On ajoute un message de succès à "$noty"
                         $noty[] = simply_notif('success', UPDATEFORMSUCCES, "center");
+                        //Et on retourne '$noty'
                         return $noty;
                     }
                 }
+            //Sinon il existe des erreurs
             }else{
+                //On stock ces erreurs dans un tableau à la clef 'noty'
                 $returnArray['noty'] = $noty;
+                //On stock les bonnes valeurs à renvoyées
                 $returnArray['arrAddFormation'] = $arrAddFormationEchec;
+                //Et on retourne le tableau qui sera récupéré et traité
                 return $returnArray;
             }
         }
