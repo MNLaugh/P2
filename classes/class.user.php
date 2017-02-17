@@ -5,36 +5,9 @@ include('class.password.php');
 class User extends Password{
 
     private $db;
-	
 	function __construct($db){
 		parent::__construct();
-	
 		$this->_db = $db;
-	}
-
-	/**
-	*	Fonction qui retourne une chaine de caractère aléatoire
-	*
-	*	@param 	Int 		- Paramètre de longueur de la chaine
-	*	@return String 		- Chaine de caractère
-	*/
-	private function rand_string($length) {
-		//Initialise la variable "string"
-		$string = NULL;
-		//Déclaration de la variable contenant tous les caractères disponibles
-		$spec = '][?/<~#!@$%^&*()+=}|:>';
-		$alpha = '0123456789abcdefghijklmnopqrstuwxyzABCDEFGHIJKLMNOPQRSTUWXYZ'; //60
-		//Mélange le résultat des deux string "spec" & "alpha".
-		$alpha = str_shuffle($spec.$alpha);
-		//Boucle sur le nombre passé en paramètre
-		for ($i = 0; $i < $length; $i++) {
-			//On choisit un caractère de manière aléatoire dans "alpha"
-		    $n = rand(0, strlen($alpha)-1);
-		    //Concataine les caractères sélectionnés à chaque boucle
-		    $string .= $alpha[$n];
-		}
-		//On retourne notre chaine finale
-		return $string;
 	}
 
 	/**

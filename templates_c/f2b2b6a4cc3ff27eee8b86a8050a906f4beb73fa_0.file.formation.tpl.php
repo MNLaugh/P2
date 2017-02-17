@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-15 20:25:32
+/* Smarty version 3.1.30, created on 2017-02-16 19:38:11
   from "C:\wamp\www\DISII\templates\page\formation.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58a4ab2c31bce9_96266575',
+  'unifunc' => 'content_58a5f193470cb8_96637704',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f2b2b6a4cc3ff27eee8b86a8050a906f4beb73fa' => 
     array (
       0 => 'C:\\wamp\\www\\DISII\\templates\\page\\formation.tpl',
-      1 => 1487186730,
+      1 => 1487193448,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58a4ab2c31bce9_96266575 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58a5f193470cb8_96637704 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\wamp\\www\\DISII\\smarties\\libs\\plugins\\function.html_options.php';
 ?>
             <!-- Exportable Table -->
@@ -37,8 +37,6 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\wamp\\www\\D
                             <div class="row clearfix">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <?php if (isset($_smarty_tpl->tpl_vars['view']->value) == 1) {?>
-                                        <?php echo print_r($_smarty_tpl->tpl_vars['uniq_form']->value);?>
-
                                     <ul class="nav nav-tabs tab-nav-right" role="tablist">
                                         <li class="active"><a href="#formation" data-toggle="tab" data-tooltip="tooltip" data-placement="top" title="La formation">&emsp;<?php echo $_smarty_tpl->tpl_vars['uniq_form']->value['short_name'];?>
 &emsp;</a></li>

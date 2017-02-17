@@ -12,7 +12,6 @@ ini_set('error_log', 'cache/logs/error_php.txt');
 $nowDate = date('Y-m-d');
 //Convertion de cette date en timestamp Unix pour manipulation
 $nowTimestamp = strtotime($nowDate);
-
 /*****  -Import des fonctions- && -Constantes-  *****\*/
 require_once('configs/func.php'); //Fonctions
 require_once('configs/const.php'); //Constantes
@@ -37,7 +36,6 @@ $user = new User($db);	//Initialise la class User
 $tpl->assign("loggedin", false); //Etat de la session par defaut "false"
 //$noty[] = simply_notif('danger', NOTCO);
 $power = 2;
-
 
 /***************  -Contrôle de menu-  ***************\*/
 require_once('./classes/class.menu.php'); //Inclusion de la class menu
@@ -76,11 +74,17 @@ switch ($page) {
 	case 'stagiaire':
 		require_once('./classes/class.stag.php');	//Inclusion de la class stagiaire
 		$stagQuery = new Stagiaire($db);			//Initialisation de l'objet Stagiaire
+		
+		$pass = $stagQuery->testcrypt();
+		var_dump($pass);
+		$dpass = $stagQuery->testdecrypt($pass);
+		var_dump($dpass);
+		//echo '<script type="text/javascript">alert("'.$dpass.'");</script>';
 		require_once('ctrl/ctrl.stagiaire.php');	//Inclusion du contrôleur de formation
 	break;
 	default:
-		# code...
-		break;
+		//Page d'Accueil
+	break;
 }
 
 /*****  -Contrôle de contenu-  *****\*/
@@ -121,8 +125,6 @@ $tpl->display('index.tpl');
 echo (isset($noty)) ? "<script type=\"text/javascript\">view_notif(".json_encode($noty).");</script>" : false;
 ?>
 <script type="text/javascript">
-
-
-//Exemple d'activation d'un tooltip
+//Exemple d'activation d'un tooltip (pour l'aide)
 	//$("#allFormTT").tooltip('show');
 </script>

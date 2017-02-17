@@ -1,10 +1,36 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-02-16 20:41:23
+  from "C:\wamp\www\DISII\templates\page\stagiaire.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_58a60063cbc5d7_85577179',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'eb82abc2aea2b9915428d1a20685b379bffee1b3' => 
+    array (
+      0 => 'C:\\wamp\\www\\DISII\\templates\\page\\stagiaire.tpl',
+      1 => 1487274082,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_58a60063cbc5d7_85577179 (Smarty_Internal_Template $_smarty_tpl) {
+if (!is_callable('smarty_function_html_options')) require_once 'C:\\wamp\\www\\DISII\\smarties\\libs\\plugins\\function.html_options.php';
+?>
 <!-- Exportable Table -->
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="card">
             <div class="header">
                 <h2>
-                    FORMATIONS{if isset($uniq_form.long_name)}:&emsp;{$uniq_form.long_name}{/if}
+                    FORMATIONS<?php if (isset($_smarty_tpl->tpl_vars['uniq_form']->value['long_name'])) {?>:&emsp;<?php echo $_smarty_tpl->tpl_vars['uniq_form']->value['long_name'];
+}?>
                 </h2>
             </div>
             <div class="body">
@@ -25,7 +51,9 @@
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <input name="name" type="text" class="form-control" placeholder="Nom" 
-                                                value="{if isset($isset_name)}{$isset_name}{/if}" />
+                                                value="<?php if (isset($_smarty_tpl->tpl_vars['isset_name']->value)) {
+echo $_smarty_tpl->tpl_vars['isset_name']->value;
+}?>" />
                                             </div>
                                         </div>
                                     </div>
@@ -33,7 +61,9 @@
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <input name="firstname" type="text" class="form-control" placeholder="Prénom"
-                                                value="{if isset($isset_firstname)}{$isset_firstname}{/if}" />
+                                                value="<?php if (isset($_smarty_tpl->tpl_vars['isset_firstname']->value)) {
+echo $_smarty_tpl->tpl_vars['isset_firstname']->value;
+}?>" />
                                             </div>
                                         </div>
                                     </div>
@@ -41,7 +71,9 @@
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <input name="email" type="email" class="form-control" placeholder="Adresse mail"
-                                                value="{if isset($isset_email)}{$isset_email}{/if}" />
+                                                value="<?php if (isset($_smarty_tpl->tpl_vars['isset_email']->value)) {
+echo $_smarty_tpl->tpl_vars['isset_email']->value;
+}?>" />
                                             </div>
                                         </div>
                                     </div>
@@ -52,7 +84,8 @@
                                         <div class="form-group">
                                             <div class="col-sm-6">
                                                 <select class="form-control show-tick" name="levelFormation">
-                                                    {html_options values=$power_values selected=$power_selected output=$power_output class="btn btn-default btn-list"}
+                                                    <?php echo smarty_function_html_options(array('values'=>$_smarty_tpl->tpl_vars['power_values']->value,'selected'=>$_smarty_tpl->tpl_vars['power_selected']->value,'output'=>$_smarty_tpl->tpl_vars['power_output']->value,'class'=>"btn btn-default btn-list"),$_smarty_tpl);?>
+
                                                 </select>
                                             </div>
                                         </div>
@@ -71,4 +104,5 @@
             </div>
         </div>
     </div>
-</div>
+</div><?php }
+}

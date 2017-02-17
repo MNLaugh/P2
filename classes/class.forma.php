@@ -168,7 +168,7 @@
             * dInFormation
             * dOutFormation
             * modeFormation
-         * @return Boolean                  - renvoi "true" si tout c'est bien passer
+         * @return Array                  - renvoi un tableau des information et erreur en cas d'echec ou un message de succès dans l'autre cas
          */
         public function operating_formation($arrAddFormation, $operation){
             /**
@@ -296,8 +296,8 @@
 
             /**
             *   Envoie final à la classe pour insertion en BDD
+            *
             * Si il n'existe pas d'erreurs et si la fonction d'ajout en base de donnée retourne true on assigne le message de succès
-            * Sinon message d'erreur "Une erreur est survenu"
             */
             if(!isset($noty)){
                 //Si l'opération est un ajout
