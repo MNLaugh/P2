@@ -1,7 +1,16 @@
 <?php
-include('configs/func.php');
-include('configs/const.php');
+include('../configs/func.php');
+include('../configs/const.php');
 echo "<h1>Page de test</h1>";
+
+
+
+
+
+
+
+
+
 
 //Manipulation des date pour savoir si la formation est en cours, passer ou à venir
 echo "Now date : ";

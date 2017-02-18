@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-16 22:41:40
-  from "C:\wamp\www\DISII\templates\index.tpl" */
+/* Smarty version 3.1.30, created on 2017-02-18 10:46:14
+  from "C:\wamp64\www\DISII\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58a61c9438b685_28839992',
+  'unifunc' => 'content_58a825f62d4733_35805253',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '743c7b096df24518e899493baaa0da5a3ccd37ad' => 
+    '3460b700600c1442d6d9caffab296083c4817eef' => 
     array (
-      0 => 'C:\\wamp\\www\\DISII\\templates\\index.tpl',
-      1 => 1487281297,
+      0 => 'C:\\wamp64\\www\\DISII\\templates\\index.tpl',
+      1 => 1487145413,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_58a61c9438b685_28839992 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58a825f62d4733_35805253 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->configLoad->_loadConfigFile($_smarty_tpl, "global.conf", "setup", 0);
 ?>
 

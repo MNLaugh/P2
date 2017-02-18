@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-13 01:43:49
+/* Smarty version 3.1.30, created on 2017-02-16 19:38:11
   from "C:\wamp\www\DISII\templates\page\formation.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58a101454e1183_19316767',
+  'unifunc' => 'content_58a5f193470cb8_96637704',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'f2b2b6a4cc3ff27eee8b86a8050a906f4beb73fa' => 
     array (
       0 => 'C:\\wamp\\www\\DISII\\templates\\page\\formation.tpl',
-      1 => 1486946628,
+      1 => 1487193448,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58a101454e1183_19316767 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58a5f193470cb8_96637704 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\wamp\\www\\DISII\\smarties\\libs\\plugins\\function.html_options.php';
 ?>
             <!-- Exportable Table -->
@@ -37,8 +37,6 @@ if (!is_callable('smarty_function_html_options')) require_once 'C:\\wamp\\www\\D
                             <div class="row clearfix">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <?php if (isset($_smarty_tpl->tpl_vars['view']->value) == 1) {?>
-                                        <?php echo print_r($_smarty_tpl->tpl_vars['uniq_form']->value);?>
-
                                     <ul class="nav nav-tabs tab-nav-right" role="tablist">
                                         <li class="active"><a href="#formation" data-toggle="tab" data-tooltip="tooltip" data-placement="top" title="La formation">&emsp;<?php echo $_smarty_tpl->tpl_vars['uniq_form']->value['short_name'];?>
 &emsp;</a></li>
@@ -204,14 +202,14 @@ echo convert_date_USinFR($_smarty_tpl->tpl_vars['uniq_form']->value['date_out'])
                                                         <div class="col-sm-6">
                                                         <label>Mode de formation</label><br>
                                                         <input name="modeFormation" value="Continue" type="radio" id="radio_11" class="radio-col-indigo" 
-                                                        <?php if ($_smarty_tpl->tpl_vars['isset_modeFormation']->value == 'Continue') {
+                                                        <?php if (isset($_smarty_tpl->tpl_vars['isset_modeFormation']->value) && $_smarty_tpl->tpl_vars['isset_modeFormation']->value == 'Continue') {
 echo "checked";
 } elseif ($_smarty_tpl->tpl_vars['uniq_form']->value['mode'] == 0) {
 echo "checked";
 }?> />
                                                         <label for="radio_11">Continue</label>
                                                         <input name="modeFormation" value="Alternance" type="radio" id="radio_12" class="radio-col-indigo" 
-                                                        <?php if ($_smarty_tpl->tpl_vars['isset_modeFormation']->value == 'Alternance') {
+                                                        <?php if (isset($_smarty_tpl->tpl_vars['isset_modeFormation']->value) && $_smarty_tpl->tpl_vars['isset_modeFormation']->value == 'Alternance') {
 echo "checked";
 } elseif ($_smarty_tpl->tpl_vars['uniq_form']->value['mode'] == 1) {
 echo "checked";
@@ -237,8 +235,16 @@ echo $_smarty_tpl->tpl_vars['uniq_form']->value['id_formation'];
                                     <?php } else { ?>
                                     <!-- Nav tabs -->
                                     <ul class="nav nav-tabs tab-nav-right" role="tablist">
-                                        <li role="presentation" class="active"><a href="#full_list" data-toggle="tab" data-tooltip="tooltip" data-placement="top" title="Liste complète">Liste complète</a></li>
-                                        <li role="presentation"><a href="#add_formation" data-toggle="tab" data-tooltip="tooltip" data-placement="top" title="Ajout formation">&emsp;Ajouter&emsp;</a></li>
+                                        <li class="active">
+                                            <a href="#full_list" data-toggle="tab" data-tooltip="tooltip" data-placement="top" title="Liste complète des formations" id="allFormTT">
+                                                Liste complète
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#add_formation" data-toggle="tab" data-tooltip="tooltip" data-placement="top" title="Ajout formation">
+                                                &emsp;&emsp;&emsp;Ajouter&emsp;&emsp;&emsp;
+                                            </a>
+                                        </li>
                                     </ul>
                                     <div class="tab-content">
                                         <!-- Tab full list -->
@@ -438,12 +444,12 @@ echo $_smarty_tpl->tpl_vars['isset_dOutFormation']->value;
                                                         <div class="col-sm-6">
                                                         <label>Mode de formation</label><br>
                                                         <input name="modeFormation" value="0" type="radio" id="radio_11" class="radio-col-indigo" 
-                                                        <?php if ($_smarty_tpl->tpl_vars['isset_modeFormation']->value == 0) {
+                                                        <?php if (isset($_smarty_tpl->tpl_vars['isset_modeFormation']->value) && $_smarty_tpl->tpl_vars['isset_modeFormation']->value == 0) {
 echo "checked";
 }?> />
                                                         <label for="radio_11">Continue</label>
                                                         <input name="modeFormation" value="1" type="radio" id="radio_12" class="radio-col-indigo" 
-                                                        <?php if ($_smarty_tpl->tpl_vars['isset_modeFormation']->value == 1) {
+                                                        <?php if (isset($_smarty_tpl->tpl_vars['isset_modeFormation']->value) && $_smarty_tpl->tpl_vars['isset_modeFormation']->value == 1) {
 echo "checked";
 }?> />
                                                         <label for="radio_12">Alternance</label>

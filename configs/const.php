@@ -21,6 +21,10 @@ define('HEIGHT_MAX', 2000);    // Hauteur max de l'image en pixels
 $tabExt = array('JPG','jpg','gif','png','jpeg');    // Extensions autorisees
 $infosImg = array();
 
+
+
+    define('PASSWORD_SCRYPT', pack('H*', strrev("bcb04b7e103a0cd8b54763051cef08bc55abe029fdebae5e1d417e2ffb2a00a3")));
+    define('PASSWORD_MODE', MCRYPT_MODE_OFB);
 //------ NOTIFICATIONS -------\\
 //***Messages d'erreurs.***
 

@@ -73,6 +73,11 @@ CREATE TABLE `level_diplome` (
   `level_name` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+
+INSERT INTO `level_diplome` (`id_level`, `level_name`) VALUES
+(1, "Bac +2"),
+(2, "Bac +3"),
+(3, "Bac +5");
 -- --------------------------------------------------------
 
 --

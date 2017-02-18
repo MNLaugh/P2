@@ -14,7 +14,6 @@
                             <div class="row clearfix">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     {if isset($view) == 1}
-                                        {$uniq_form|print_r}
                                     <ul class="nav nav-tabs tab-nav-right" role="tablist">
                                         <li class="active"><a href="#formation" data-toggle="tab" data-tooltip="tooltip" data-placement="top" title="La formation">&emsp;{$uniq_form.short_name}&emsp;</a></li>
                                         <li><a href="#update_formation" data-toggle="tab" data-tooltip="tooltip" data-placement="top" title="Ajout formation">&emsp;Modifier {$uniq_form.short_name}&emsp;</a></li>
@@ -150,10 +149,10 @@
                                                         <div class="col-sm-6">
                                                         <label>Mode de formation</label><br>
                                                         <input name="modeFormation" value="Continue" type="radio" id="radio_11" class="radio-col-indigo" 
-                                                        {if $isset_modeFormation=='Continue'}{"checked"}{elseif $uniq_form.mode == 0}{"checked"}{/if} />
+                                                        {if isset($isset_modeFormation) && $isset_modeFormation=='Continue'}{"checked"}{elseif $uniq_form.mode == 0}{"checked"}{/if} />
                                                         <label for="radio_11">Continue</label>
                                                         <input name="modeFormation" value="Alternance" type="radio" id="radio_12" class="radio-col-indigo" 
-                                                        {if $isset_modeFormation=='Alternance'}{"checked"}{elseif $uniq_form.mode == 1}{"checked"}{/if} />
+                                                        {if isset($isset_modeFormation) && $isset_modeFormation=='Alternance'}{"checked"}{elseif $uniq_form.mode == 1}{"checked"}{/if} />
                                                         <label for="radio_12">Alternance</label>
                                                         </div>
                                                     </div>
@@ -171,8 +170,16 @@
                                     {else}
                                     <!-- Nav tabs -->
                                     <ul class="nav nav-tabs tab-nav-right" role="tablist">
-                                        <li role="presentation" class="active"><a href="#full_list" data-toggle="tab" data-tooltip="tooltip" data-placement="top" title="Liste complète">Liste complète</a></li>
-                                        <li role="presentation"><a href="#add_formation" data-toggle="tab" data-tooltip="tooltip" data-placement="top" title="Ajout formation">&emsp;Ajouter&emsp;</a></li>
+                                        <li class="active">
+                                            <a href="#full_list" data-toggle="tab" data-tooltip="tooltip" data-placement="top" title="Liste complète des formations" id="allFormTT">
+                                                Liste complète
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#add_formation" data-toggle="tab" data-tooltip="tooltip" data-placement="top" title="Ajout formation">
+                                                &emsp;&emsp;&emsp;Ajouter&emsp;&emsp;&emsp;
+                                            </a>
+                                        </li>
                                     </ul>
                                     <div class="tab-content">
                                         <!-- Tab full list -->
@@ -330,10 +337,10 @@
                                                         <div class="col-sm-6">
                                                         <label>Mode de formation</label><br>
                                                         <input name="modeFormation" value="0" type="radio" id="radio_11" class="radio-col-indigo" 
-                                                        {if $isset_modeFormation==0}{"checked"}{/if} />
+                                                        {if isset($isset_modeFormation) && $isset_modeFormation==0}{"checked"}{/if} />
                                                         <label for="radio_11">Continue</label>
                                                         <input name="modeFormation" value="1" type="radio" id="radio_12" class="radio-col-indigo" 
-                                                        {if $isset_modeFormation==1}{"checked"}{/if} />
+                                                        {if isset($isset_modeFormation) && $isset_modeFormation==1}{"checked"}{/if} />
                                                         <label for="radio_12">Alternance</label>
                                                         </div>
                                                     </div>
