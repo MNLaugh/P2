@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <HTML>
-
 <HEAD>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <TITLE>{if isset($page)}{$pageName|capitalize} | {/if}{#title#}</TITLE>
+    <title>{if isset($page)}{$pageName|capitalize} | {/if}{#title#}</title>
     <!-- Favicon-->
     <link rel="icon" href="ressources/images/GF-favicon.ico" type="image/x-icon">
     <!-- Google Fonts -->
@@ -27,19 +26,3 @@
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="ressources/css/themes/theme-indigo.min.css" rel="stylesheet" />
 </HEAD>
-<BODY class="theme-indigo">
-    <!-- Page Loader -->
-    <div class="page-loader-wrapper">
-        <div class="loader">
-            <div class="md-preloader pl-size-md">
-                <svg viewbox="0 0 75 75">
-                    <circle cx="37.5" cy="37.5" r="33.5" class="pl-red" stroke-width="4" />
-                </svg>
-            </div>
-            <p>Please wait...</p>
-        </div>
-    </div>
-    <!-- #END# Page Loader -->
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
-    <!-- #END# Overlay For Sidebars -->

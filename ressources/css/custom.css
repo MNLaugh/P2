@@ -17,6 +17,13 @@
   text-decoration: unset;
   color: #555;
 }
+#clink-stagiaire {
+  text-decoration: unset;
+  color: #555;
+}
+.avatar-list{
+  width: 24px;
+  height: 24px;
 }
 @media (max-width: 767px) {
   .logo {
@@ -39,4 +46,45 @@
     margin-left: 0em;
     margin-right: 1em;
   }
+}
+.logo-login img{
+  width: 80px;
+}
+.small-login{
+  margin-left: 20px;
+  font-size: 96%;
+}
+.card-login{
+  -moz-box-shadow: 0px -2px 5px 0px #656565;
+  -webkit-box-shadow: 0px -2px 5px 0px #656565;
+  -o-box-shadow: 0px -2px 5px 0px #656565;
+  box-shadow: 0px -2px 5px 0px #656565;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=90, Strength=5);
+}
+.name{
+  max-width: 130px;
+  font-size: 14px;
+}
+.email{
+  max-width: 150px;
+  float: right;
+  margin-top: -20px;
+  font-size: 14px;
+}
+.power{
+  color: #fff;
+}
+.today{
+  color: #fff;
+}
+
+::-ms-browse {
+  background: black;
+  color: red;
+  padding: 1em;
+}
+::-webkit-file-upload-button {
+  background: black;
+  color: red;
+  padding: 1em;
 }

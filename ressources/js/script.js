@@ -1,6 +1,4 @@
-﻿//Général mask date input pour le model de date français
-$("[name='date']").inputmask('dd/mm/yyyy', { placeholder: '__/__/____' });
-
+﻿
 //Affichage des notifications
 function view_notif(notif){
 	//Boucle sur le tableau en paramètre

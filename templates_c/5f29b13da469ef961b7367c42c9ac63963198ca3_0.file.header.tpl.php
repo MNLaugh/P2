@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-18 10:46:14
+/* Smarty version 3.1.30, created on 2017-02-19 11:28:45
   from "C:\wamp64\www\DISII\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58a825f673a4e9_77799123',
+  'unifunc' => 'content_58a9816de7d8a5_71475913',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5f29b13da469ef961b7367c42c9ac63963198ca3' => 
     array (
       0 => 'C:\\wamp64\\www\\DISII\\templates\\header.tpl',
-      1 => 1487145413,
+      1 => 1487503563,
       2 => 'file',
     ),
   ),
@@ -20,21 +20,20 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58a825f673a4e9_77799123 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58a9816de7d8a5_71475913 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_capitalize')) require_once 'C:\\wamp64\\www\\DISII\\smarties\\libs\\plugins\\modifier.capitalize.php';
 ?>
 <!DOCTYPE html>
 <HTML>
-
 <HEAD>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <TITLE><?php if (isset($_smarty_tpl->tpl_vars['page']->value)) {
+    <title><?php if (isset($_smarty_tpl->tpl_vars['page']->value)) {
 echo smarty_modifier_capitalize($_smarty_tpl->tpl_vars['pageName']->value);?>
  | <?php }
 echo $_smarty_tpl->smarty->ext->configLoad->_getConfigVariable($_smarty_tpl, 'title');?>
-</TITLE>
+</title>
     <!-- Favicon-->
     <link rel="icon" href="ressources/images/GF-favicon.ico" type="image/x-icon">
     <!-- Google Fonts -->

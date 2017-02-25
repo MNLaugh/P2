@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-11 21:02:38
+/* Smarty version 3.1.30, created on 2017-02-25 16:32:36
   from "C:\wamp\www\DISII\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_589f6dded8dd16_53486476',
+  'unifunc' => 'content_58b1a394da0392_96409965',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5816b921ba902337c0f89b6f0aa0864809869ef8' => 
     array (
       0 => 'C:\\wamp\\www\\DISII\\templates\\header.tpl',
-      1 => 1486843355,
+      1 => 1487635571,
       2 => 'file',
     ),
   ),
@@ -20,21 +20,20 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_589f6dded8dd16_53486476 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b1a394da0392_96409965 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_capitalize')) require_once 'C:\\wamp\\www\\DISII\\smarties\\libs\\plugins\\modifier.capitalize.php';
 ?>
 <!DOCTYPE html>
 <HTML>
-
 <HEAD>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <TITLE><?php if (isset($_smarty_tpl->tpl_vars['page']->value)) {
+    <title><?php if (isset($_smarty_tpl->tpl_vars['page']->value)) {
 echo smarty_modifier_capitalize($_smarty_tpl->tpl_vars['pageName']->value);?>
  | <?php }
 echo $_smarty_tpl->smarty->ext->configLoad->_getConfigVariable($_smarty_tpl, 'title');?>
-</TITLE>
+</title>
     <!-- Favicon-->
     <link rel="icon" href="ressources/images/GF-favicon.ico" type="image/x-icon">
     <!-- Google Fonts -->
@@ -55,21 +54,5 @@ echo $_smarty_tpl->smarty->ext->configLoad->_getConfigVariable($_smarty_tpl, 'ti
     <link href="ressources/css/custom.css" rel="stylesheet">
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="ressources/css/themes/theme-indigo.min.css" rel="stylesheet" />
-</HEAD>
-<BODY class="theme-indigo">
-    <!-- Page Loader -->
-    <div class="page-loader-wrapper">
-        <div class="loader">
-            <div class="md-preloader pl-size-md">
-                <svg viewbox="0 0 75 75">
-                    <circle cx="37.5" cy="37.5" r="33.5" class="pl-red" stroke-width="4" />
-                </svg>
-            </div>
-            <p>Please wait...</p>
-        </div>
-    </div>
-    <!-- #END# Page Loader -->
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
-    <!-- #END# Overlay For Sidebars --><?php }
+</HEAD><?php }
 }

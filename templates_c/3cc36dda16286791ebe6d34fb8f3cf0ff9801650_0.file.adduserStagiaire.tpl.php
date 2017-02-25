@@ -1,10 +1,35 @@
+<?php
+/* Smarty version 3.1.30, created on 2017-02-25 15:44:25
+  from "C:\wamp\www\DISII\templates\page\stagiaire\adduserStagiaire.tpl" */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.30',
+  'unifunc' => 'content_58b1984943e559_01881162',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '3cc36dda16286791ebe6d34fb8f3cf0ff9801650' => 
+    array (
+      0 => 'C:\\wamp\\www\\DISII\\templates\\page\\stagiaire\\adduserStagiaire.tpl',
+      1 => 1487617953,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_58b1984943e559_01881162 (Smarty_Internal_Template $_smarty_tpl) {
+if (!is_callable('smarty_function_html_options')) require_once 'C:\\wamp\\www\\DISII\\smarties\\libs\\plugins\\function.html_options.php';
+?>
 <!-- Exportable Table -->
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <div class="card">
             <div class="header">
                 <h2>
-                    FORMATIONS{if isset($uniq_form.long_name)}:&emsp;{$uniq_form.long_name}{/if}
+                    AJOUTER UN UTILISATEUR
                 </h2>
             </div>
             <div class="body">
@@ -19,13 +44,15 @@
                             - Email : email
                             - Permission : power
                          -->
-                            <form action="#addUser" method="POST">
+                            <form action="" method="POST">
                                 <div class="row clearfix">
                                     <div class="col-sm-4">
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <input name="name" type="text" class="form-control" placeholder="Nom" 
-                                                value="{if isset($isset_name)}{$isset_name}{/if}" />
+                                                value="<?php if (isset($_smarty_tpl->tpl_vars['isset_name']->value)) {
+echo $_smarty_tpl->tpl_vars['isset_name']->value;
+}?>" />
                                             </div>
                                         </div>
                                     </div>
@@ -33,7 +60,9 @@
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <input name="firstname" type="text" class="form-control" placeholder="Prénom"
-                                                value="{if isset($isset_firstname)}{$isset_firstname}{/if}" />
+                                                value="<?php if (isset($_smarty_tpl->tpl_vars['isset_firstname']->value)) {
+echo $_smarty_tpl->tpl_vars['isset_firstname']->value;
+}?>" />
                                             </div>
                                         </div>
                                     </div>
@@ -41,7 +70,9 @@
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <input name="email" type="email" class="form-control" placeholder="Adresse mail"
-                                                value="{if isset($isset_email)}{$isset_email}{/if}" />
+                                                value="<?php if (isset($_smarty_tpl->tpl_vars['isset_email']->value)) {
+echo $_smarty_tpl->tpl_vars['isset_email']->value;
+}?>" />
                                             </div>
                                         </div>
                                     </div>
@@ -51,8 +82,9 @@
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <div class="col-sm-6">
-                                                <select class="form-control show-tick" name="levelFormation">
-                                                    {html_options values=$power_values selected=$power_selected output=$power_output class="btn btn-default btn-list"}
+                                                <select class="form-control show-tick" name="power">
+                                                    <?php echo smarty_function_html_options(array('values'=>$_smarty_tpl->tpl_vars['power_values']->value,'selected'=>$_smarty_tpl->tpl_vars['power_selected']->value,'output'=>$_smarty_tpl->tpl_vars['power_output']->value,'class'=>"btn btn-default btn-list"),$_smarty_tpl);?>
+
                                                 </select>
                                             </div>
                                         </div>
@@ -71,4 +103,5 @@
             </div>
         </div>
     </div>
-</div>
+</div><?php }
+}

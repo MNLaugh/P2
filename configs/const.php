@@ -5,35 +5,44 @@ define('DBHOST','127.0.0.1');
 define('DBNAME','gestiform');
 define('DBUSER','root');
 define('DBPASS','');
-
 $db = new PDO("mysql:host=".DBHOST.";dbname=".DBNAME, DBUSER, DBPASS);
+define('PASSWORD_SCRYPT', pack('H*', strrev("bcb04b7e103a0cd8b54763051cef08bc55abe029fdebae5e1d417e2ffb2a00a3")));
+define('PASSWORD_MODE', MCRYPT_MODE_OFB);
+
+$allPageList = array(
+'formation', 
+'addFormation', 
+'viewFormation', 
+'editFormation', 
+
+'stagiaire', 
+'adduserStagiaire', 
+'viewStagiaire', 
+'editStagiaire',
+'singleStagiaire'
+);
 
 //------ UPLOAD -------\\
 $extension = '';
 $message = '';
 $nomImage = '';
-define('TARGET_UPLOAD', './upld_image/');	// Repertoire cible public images
-define('TARGET_UPLOAD_THUMBS', './upld_image/thumbs/');	// Repertoire cible thumbails
+define('DEFAULT_AVATAR', './ressources/images/default-avatar.png');
+define('TARGET_UPLOAD', "./ressources/images/upload/");	// Repertoire cible public images
+define('TARGET_UPLOAD_THUMBS', "./ressources/images/upload/thumbs/");	// Repertoire cible thumbails
 define('MAX_SIZE', 2000000);    // Taille max en octets du fichier
 define('WIDTH_MAX', 2000);    // Largeur max de l'image en pixels
 define('HEIGHT_MAX', 2000);    // Hauteur max de l'image en pixels
 // Tableaux de donnees
-$tabExt = array('JPG','jpg','gif','png','jpeg');    // Extensions autorisees
+
 $infosImg = array();
 
-
-
-    define('PASSWORD_SCRYPT', pack('H*', strrev("bcb04b7e103a0cd8b54763051cef08bc55abe029fdebae5e1d417e2ffb2a00a3")));
-    define('PASSWORD_MODE', MCRYPT_MODE_OFB);
 //------ NOTIFICATIONS -------\\
 //***Messages d'erreurs.***
-
-//Pas de session active
-define('NOTCO', 'Accès refuser! Vous ne pouvez pas accéder à cette page si vous n\'êtes pas connecté!');
-define('CO', 'Accès refuser! Vous ête déjà connecté!');
+define('ERROR_NOT_KNOW', "Une erreur est survenu, nous en sommes désolé !");
 //LOGIN
-define('ERRLOGIN', 'Erreur de connexion! Identifiant incorrect!');
-define('ERRCONNECTION', 'Erreur de connexion! Un ou plusieurs champs sont vide!');
+define('NOT_LOGIN', "Veuillez entrer un nom d'utilisateur !");
+define('NOT_PASS', "Veuillez entrer un mot de passe !");
+
 //USER FORM 
 define('EMPTYUSERNAME', 'Erreur! Entrer un nom d\'utilisateur!');
 define('EMPTYPASS', 'Erreur! Veuillez entrer un mot de passe!');
@@ -55,6 +64,16 @@ define('FILENOTIMG', 'Erreur! Le fichier à uploader n\'est pas une image!');
 define('BADSIZE', 'Erreur! Erreur dans les dimensions de l\'image!');
 define('INTERROR', 'Erreur! Une erreur interne a empêché l\'uplaod de l\'image!');
 define('BADUPLOAD', 'Erreur! Problème lors de l\'upload!');
+//FORMATION ERROR
+define('NOT_ACRONYME', "Aucun acronyme n'a été saisie !");
+define('NOT_FULL_NAME', "Aucun nom complet n'a été saisie !");
+define('NOT_DESC', "Aucune description n'a été saisie !");
+define('NOT_LEVEL', "Veuillez choisir un niveau diplomant !");
+define('NOT_DATE_IN', "Aucune date d'entrée n'a été saisie !");
+define('NOT_DATE_OUT', "Aucune date de fin n'a été saisie !");
+define('INVALID_DATE_IN_OUT', "Date de début est supérieur à la date de fin !");
+define('NOT_MODE', "Aucun mode de formation choisie !");
+define('INVALID_ID', "Identifiant de formation invalide !");
 
 /*END ERROR*/
 
@@ -62,13 +81,16 @@ define('BADUPLOAD', 'Erreur! Problème lors de l\'upload!');
 //Login
 define('OKLOGIN', 'Succès! Connexion réussi!');
 //GOOD UPLOAD
-define('GOODUPLOAD', 'Succès! Image(s) upload avec succès!');
-//User add/del
+define('GOODUPLOAD', 'Image ajouté avec succès!');
 
-/*Success formation*/
+//FORMATION SUCCES
 define('ADDFORMSUCCES', "Formation ajouté avec succès !");
 define('UPDATEFORMSUCCES', "Formation modifié avec succès !");
 
-define('USERUPDATED', 'Succès! Informations utilisateur modifier!');
-define('USERDELETED', 'Succès! Utilisateur supprimer!');
+
+define('ADDUSERSUCCES', 'Utilisateur ajouté!');
+define('USERUPDATED', 'Informations utilisateur modifié!');
+define('USERDELETED', 'Utilisateur supprimé!');
+//Edit utilisateur sucès
+define('EDITUSERSUCCES', "Utilisateur modifié !");
 ?>
