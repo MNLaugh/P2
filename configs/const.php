@@ -23,18 +23,9 @@ $allPageList = array(
 );
 
 //------ UPLOAD -------\\
-$extension = '';
-$message = '';
-$nomImage = '';
 define('DEFAULT_AVATAR', './ressources/images/default-avatar.png');
 define('TARGET_UPLOAD', "./ressources/images/upload/");	// Repertoire cible public images
 define('TARGET_UPLOAD_THUMBS', "./ressources/images/upload/thumbs/");	// Repertoire cible thumbails
-define('MAX_SIZE', 2000000);    // Taille max en octets du fichier
-define('WIDTH_MAX', 2000);    // Largeur max de l'image en pixels
-define('HEIGHT_MAX', 2000);    // Hauteur max de l'image en pixels
-// Tableaux de donnees
-
-$infosImg = array();
 
 //------ NOTIFICATIONS -------\\
 //***Messages d'erreurs.***
