@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2017 at 04:39 PM
+-- Generation Time: Feb 26, 2017 at 01:45 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -97,19 +97,6 @@ INSERT INTO `level_diplome` (`id_level`, `level_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `periode`
---
-
-CREATE TABLE IF NOT EXISTS `periode` (
-  `id_user` varchar(6) NOT NULL,
-  `id_formation` int(11) NOT NULL,
-  PRIMARY KEY (`id_user`,`id_formation`),
-  KEY `FK_periode_id_formation` (`id_formation`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `users`
 --
 
@@ -140,22 +127,12 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id_user`, `login`, `password`, `name`, `first_name`, `email`, `date_naissance`, `adresse_1`, `adresse_2`, `adresse_3`, `code_postal`, `ville`, `telephone`, `level_diplom`, `id_formation`, `id_image`, `full_profile`, `power`) VALUES
-('amBtuh', 'marnaud', '=smOntdlEIzPRRDxyNSeGHXg56XOZfiqP918AG5aYehN', 'Arnaud', 'MarilÃ¨ne', 'marilene@test.tld', '2011-09-16', '', 'test', '', 36110, 'levroux', 656566312, 2, 2, 2, 1, 2),
+('amBtuh', 'marnaud', '=smOntdlEIzPRRDxyNSeGHXg56XOZfiqP918AG5aYehN', 'Arnaud', 'Marilène', 'marilene@test.tld', '2011-09-16', '', 'test', '', 36110, 'levroux', 656566312, 2, 2, 2, 1, 2),
 ('cmJa98', 'mcaillou', '=wmbTsa/Z3mPuCpRuvI24MVlk5NW/ezq3z85HDXdOrq2', 'Caillou', 'Marion', 'caillou@lol.tld', '1991-09-16', '', 'test', '', 36110, 'Lvrtoux', 664518431, 1, 3, NULL, 1, 2),
 ('dpod7b', 'pdubois', '=sEbplTwWE2FO2dp35qXxNhYIKmmFUUNZaFvE06zEYwr', 'Dubois', 'Pierre', 'dubois@test.tld', '1991-09-16', '', 'test', '', 36110, 'Chateauroux', 668461654, 3, 3, NULL, 1, 2),
+('hc8t76', 'chélène', '=sWbDJxUV5YLeMh0h9HKVrMAVbe2hRhQcVx3cfO1RCDl', 'Hélène', 'coucou', 'csvdv@ediubc.tld', '0000-00-00', NULL, NULL, '', 0, '', 0, 0, 0, NULL, 0, 2),
 ('jfK0mf', 'fjocelyne', '=4kNSzxJV4mjQhBOCWwEWC4ovvhLNTvm3gvn2+Evjms7', 'Jocelyne', 'Fabrice', 'Fabrice@test.tld', '1991-09-16', '', 'danscette rue', '', 36110, 'Levroux', 658165168, 3, 2, 5, 1, 2),
-('mn91nK', 'nmetivier', '=gCTp4bLBGfRaYNciyYMWkwMfTJEPjdv2Njw5qeV2E0w', 'MÃ©tivier', 'Nicolas', 'contact@mnlaugh.com', '0000-00-00', NULL, NULL, '', 0, '', 0, 2, 0, NULL, 0, 0);
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `periode`
---
-ALTER TABLE `periode`
-  ADD CONSTRAINT `FK_periode_id_formation` FOREIGN KEY (`id_formation`) REFERENCES `formations` (`id_formation`),
-  ADD CONSTRAINT `FK_periode_id_user` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`);
+('mn91nK', 'nmetivier', '=gCTp4bLBGfRaYNciyYMWkwMfTJEPjdv2Njw5qeV2E0w', 'Métivier', 'Nicolas', 'contact@mnlaugh.com', '0000-00-00', NULL, NULL, '', 0, '', 0, 2, 0, NULL, 0, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
