@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-25 16:28:35
+/* Smarty version 3.1.30, created on 2017-02-25 18:26:00
   from "C:\wamp\www\DISII\templates\page\formation\formation.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b1a2a39d4822_92621900',
+  'unifunc' => 'content_58b1be28c033e4_37455631',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b1a2a39d4822_92621900 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b1be28c033e4_37455631 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

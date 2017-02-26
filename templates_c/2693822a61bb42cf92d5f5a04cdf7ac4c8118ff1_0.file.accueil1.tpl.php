@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-25 16:32:37
+/* Smarty version 3.1.30, created on 2017-02-25 17:11:41
   from "C:\wamp\www\DISII\templates\page\accueil1.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b1a395183935_77229496',
+  'unifunc' => 'content_58b1acbd97b482_44438672',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b1a395183935_77229496 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b1acbd97b482_44438672 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
     <div class="info-box bg-cyan hover-expand-effect">

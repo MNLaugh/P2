@@ -54,7 +54,7 @@
                       {section name=key loop=$allFormation}
                           <tr>
                               <td><a id="clink-formation" title="Voir {$allFormation[key]['short_name']}" href="./?p=viewFormation&id={$allFormation[key]['id_formation']}">{$allFormation[key]['short_name']}</a></td>
-                              <td><a id="clink-formation" title="Voir {$allFormation[key]['short_name']}" href="./?p=viewFormation&id={$allFormation[key]['id_formation']}">{$allFormation[key]['long_name']}</a</td>
+                              <td><a id="clink-formation" title="Voir {$allFormation[key]['short_name']}" href="./?p=viewFormation&id={$allFormation[key]['id_formation']}">{$allFormation[key]['long_name']}</a></td>
                               <td>{$allFormation[key]['level_name']}</td>
                               <td>{$allFormation[key]['status']}</td>
                               <td>

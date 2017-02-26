@@ -3,9 +3,13 @@
         <div class="search-icon">
             <i class="material-icons">search</i>
         </div>
-        <input type="text" placeholder="START TYPING...">
+        <form action="" method="post">
+        <input id="search" type="text" name="search" placeholder="RECHERCHE..." onkeyup="searchAutoComplete(this)">
+        </form>
         <div class="close-search">
             <i class="material-icons">close</i>
+        </div>
+        <div id="result">
         </div>
     </div>
     <!-- #END# Search Bar -->

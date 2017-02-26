@@ -25,4 +25,6 @@
     <link href="ressources/css/custom.css" rel="stylesheet">
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="ressources/css/themes/theme-indigo.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+ 
 </HEAD>

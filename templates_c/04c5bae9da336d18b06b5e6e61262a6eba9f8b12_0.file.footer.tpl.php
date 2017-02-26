@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-25 16:32:37
+/* Smarty version 3.1.30, created on 2017-02-26 01:43:23
   from "C:\wamp\www\DISII\templates\footer.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b1a395287132_15376570',
+  'unifunc' => 'content_58b224ab9f1a20_36298324',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '04c5bae9da336d18b06b5e6e61262a6eba9f8b12' => 
     array (
       0 => 'C:\\wamp\\www\\DISII\\templates\\footer.tpl',
-      1 => 1487145414,
+      1 => 1488045819,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,16 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b1a395287132_15376570 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b224ab9f1a20_36298324 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <!-- Jquery Core Js -->
-    <?php echo '<script'; ?>
- src="ressources/plugins/jquery/jquery.min.js"><?php echo '</script'; ?>
+  <?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"><?php echo '</script'; ?>
 >
+<?php echo '<script'; ?>
+ src="//code.jquery.com/ui/1.11.4/jquery-ui.js"><?php echo '</script'; ?>
+>
+
     <!-- Bootstrap Core Js -->
     <?php echo '<script'; ?>
  src="ressources/plugins/bootstrap/js/bootstrap.js"><?php echo '</script'; ?>
@@ -167,6 +171,11 @@ function content_58b1a395287132_15376570 (Smarty_Internal_Template $_smarty_tpl)
 >
     <?php echo '<script'; ?>
  src="ressources/js/script.js"><?php echo '</script'; ?>
+>
+
+  
+    <?php echo '<script'; ?>
+ src="./ressources/js/search.js"><?php echo '</script'; ?>
 >
 </BODY>
 </HTML>

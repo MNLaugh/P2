@@ -371,18 +371,6 @@ Class Stagiaire extends User{
         }
     }
 
-    public function testcrypt(){
-        $pass = $this->rand_string(8);
-        return $this->myEncrypt(PASSWORD_SCRYPT, $pass, PASSWORD_MODE);
-    }
-    public function testcryptpass($pass){
-        return $this->myEncrypt(PASSWORD_SCRYPT, $pass, PASSWORD_MODE);
-    }
-    public function testdecrypt($cryptedpass){
-        $decryptedPass = $this->myDecrypt(PASSWORD_SCRYPT, $cryptedpass, PASSWORD_MODE);
-        return $decryptedPass;
-    }
-
     public function get_password_by_login($login){
         try {
             $stmt = $this->_db->prepare('SELECT password FROM users WHERE login = :login');

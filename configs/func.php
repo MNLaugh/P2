@@ -104,4 +104,50 @@ function progress_bar($percent, $daysPass=null, $daysFutur=null){
             <center>'. $daysFutur .'</center>
         </div>';
 }
+
+function format_search_formation($item){
+    $formRes['id_formation'] = $item['id_formation'];
+    $formRes['short_name'] = $item['short_name'];
+    $formRes['long_name'] = $item['long_name'];
+    $formRes['mode'] = $item['mode'];
+    //Initialise la date du jour
+    $nowDate = date('Y-m-d');
+    //Convertion de cette date en timestamp Unix pour manipulation
+    $nowTimestamp = strtotime($nowDate);
+    $formRes['status'] = null;
+    $inTimestamp = strtotime($item['date_in']);
+    $outTimestamp = strtotime($item['date_out']);
+    $inInterval = $nowTimestamp-$inTimestamp;
+    $outInterval = $nowTimestamp-$outTimestamp;
+    //les deux interval sont déjà passés
+    if($inInterval < 0 && $outInterval < 0){
+        //Assignation au tpl
+        $formRes['status'] = "Formation à venir";
+    //les deux interval sont à venir
+    }elseif($inInterval > 0 && $outInterval > 0){
+        //Assignation au tpl
+        $formRes['status'] = "Formation terminée";
+    //Sinon la formation est en cours
+    }else{
+        //calcul des jours passées
+        $daysPass = round((($inInterval/24)/60)/60);
+        //calcul des semaines passées
+        $daysWeekPass = round($daysPass/7)*2;
+        //recalcul des jour passer sans les weekend
+        $daysPass = $daysPass - $daysWeekPass;
+        //Calcul des jours restants
+        $daysFutur = round((($outInterval/24)/60)/60)*-1;
+        //Calcul des semaines restantes
+        $daysWeekFutur = round($daysFutur/7)*2;
+        //Recalcul des jours restants sans les weekend
+        $daysFutur = $daysFutur - $daysWeekFutur;
+        //Total de jours de formation
+        $dayTotal = $daysPass+$daysFutur;
+        //Pourcentage passé
+        $percent = ($daysPass*100)/$dayTotal;
+        //Envoi au template avec la fonction de création de la progress bar
+        $formRes['status'] =  progress_bar($percent, $daysPass.' jours passés', $daysFutur.' jours restant');
+    }
+    return $formRes;
+}
 ?>

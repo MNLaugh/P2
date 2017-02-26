@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-25 16:32:36
+/* Smarty version 3.1.30, created on 2017-02-26 01:43:23
   from "C:\wamp\www\DISII\templates\header.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b1a394da0392_96409965',
+  'unifunc' => 'content_58b224ab47d462_86187071',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5816b921ba902337c0f89b6f0aa0864809869ef8' => 
     array (
       0 => 'C:\\wamp\\www\\DISII\\templates\\header.tpl',
-      1 => 1487635571,
+      1 => 1488045771,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b1a394da0392_96409965 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b224ab47d462_86187071 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_modifier_capitalize')) require_once 'C:\\wamp\\www\\DISII\\smarties\\libs\\plugins\\modifier.capitalize.php';
 ?>
 <!DOCTYPE html>
@@ -54,5 +54,7 @@ echo $_smarty_tpl->smarty->ext->configLoad->_getConfigVariable($_smarty_tpl, 'ti
     <link href="ressources/css/custom.css" rel="stylesheet">
     <!-- AdminBSB Themes. You can choose a theme from css/themes instead of get all themes -->
     <link href="ressources/css/themes/theme-indigo.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+ 
 </HEAD><?php }
 }

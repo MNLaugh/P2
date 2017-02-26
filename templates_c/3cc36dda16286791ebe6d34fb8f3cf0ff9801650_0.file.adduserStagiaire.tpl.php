@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-25 15:44:25
+/* Smarty version 3.1.30, created on 2017-02-25 18:28:25
   from "C:\wamp\www\DISII\templates\page\stagiaire\adduserStagiaire.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b1984943e559_01881162',
+  'unifunc' => 'content_58b1beb944a0f5_91629495',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b1984943e559_01881162 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b1beb944a0f5_91629495 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\wamp\\www\\DISII\\smarties\\libs\\plugins\\function.html_options.php';
 ?>
 <!-- Exportable Table -->

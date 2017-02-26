@@ -88,6 +88,7 @@ Class Formations {
      */
     private function add_SQL_formation($arrAddFormation){
         try{
+            $stmt = $this->_db->query('SET NAMES utf8');
             $stmt = $this->_db->prepare('INSERT INTO formations (short_name, long_name, description, level_down, date_in, date_out, mode) VALUES (:short_name, :long_name, :description, :level_down, :date_in, :date_out, :mode)');
             $stmt->execute(array(
                 ':short_name' => $arrAddFormation['sNameFormation'],

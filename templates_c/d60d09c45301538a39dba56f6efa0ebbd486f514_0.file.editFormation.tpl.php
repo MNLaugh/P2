@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-25 16:15:31
+/* Smarty version 3.1.30, created on 2017-02-25 18:26:12
   from "C:\wamp\www\DISII\templates\page\formation\editFormation.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b19f935f8f72_90114878',
+  'unifunc' => 'content_58b1be34857f62_22354625',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b19f935f8f72_90114878 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b1be34857f62_22354625 (Smarty_Internal_Template $_smarty_tpl) {
 if (!is_callable('smarty_function_html_options')) require_once 'C:\\wamp\\www\\DISII\\smarties\\libs\\plugins\\function.html_options.php';
 ?>
 <div class="row clearfix">

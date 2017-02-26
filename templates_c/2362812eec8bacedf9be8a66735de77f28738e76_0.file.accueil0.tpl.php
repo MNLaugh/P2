@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-25 16:27:39
+/* Smarty version 3.1.30, created on 2017-02-26 01:43:23
   from "C:\wamp\www\DISII\templates\page\accueil0.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b1a26b1e1119_71049732',
+  'unifunc' => 'content_58b224ab84c655_82448128',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2362812eec8bacedf9be8a66735de77f28738e76' => 
     array (
       0 => 'C:\\wamp\\www\\DISII\\templates\\page\\accueil0.tpl',
-      1 => 1488036412,
+      1 => 1488066183,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b1a26b1e1119_71049732 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b224ab84c655_82448128 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
     <div class="info-box bg-cyan hover-expand-effect">
@@ -95,7 +95,7 @@ for ($__section_key_0_iteration = 1, $_smarty_tpl->tpl_vars['__smarty_section_ke
                               <td><a id="clink-formation" title="Voir <?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['short_name'];?>
 " href="./?p=viewFormation&id=<?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['id_formation'];?>
 "><?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['long_name'];?>
-</a</td>
+</a></td>
                               <td><?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['level_name'];?>
 </td>
                               <td><?php echo $_smarty_tpl->tpl_vars['allFormation']->value[(isset($_smarty_tpl->tpl_vars['__smarty_section_key']->value['index']) ? $_smarty_tpl->tpl_vars['__smarty_section_key']->value['index'] : null)]['status'];?>

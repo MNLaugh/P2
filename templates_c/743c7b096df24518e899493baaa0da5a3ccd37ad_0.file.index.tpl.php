@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-25 16:32:36
+/* Smarty version 3.1.30, created on 2017-02-26 01:43:23
   from "C:\wamp\www\DISII\templates\index.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b1a394c7af55_44807743',
+  'unifunc' => 'content_58b224ab311f99_74960643',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '743c7b096df24518e899493baaa0da5a3ccd37ad' => 
     array (
       0 => 'C:\\wamp\\www\\DISII\\templates\\index.tpl',
-      1 => 1488036261,
+      1 => 1488065762,
       2 => 'file',
     ),
   ),
@@ -25,7 +25,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_58b1a394c7af55_44807743 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b224ab311f99_74960643 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->smarty->ext->configLoad->_loadConfigFile($_smarty_tpl, "global.conf", "setup", 0);
 ?>
 

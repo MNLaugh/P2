@@ -37,7 +37,7 @@
     		              <tr>
     		                  <td><a id="clink-formation" title="Voir {$allFormation[key]['short_name']}" href="./?p=viewFormation&id={$allFormation[key]['id_formation']}">{$allFormation[key]['short_name']}</a></td>
     		                  <td><a id="clink-formation" title="Voir {$allFormation[key]['short_name']}" href="./?p=viewFormation&id={$allFormation[key]['id_formation']}">{$allFormation[key]['long_name']}</a</td>
-    		                  <td><a id="clink-formation" title="Voir {$allFormation[key]['short_name']}" href="./?p=viewFormation&id={$allFormation[key]['id_formation']}">{$allFormation[key]['description']}</a</td>
+    		                  <td><a id="clink-formation" title="Voir {$allFormation[key]['short_name']}" href="./?p=viewFormation&id={$allFormation[key]['id_formation']}">{$allFormation[key]['description']}</a></td>
     		                  <td>{$allFormation[key]['level_name']}</td>
     		                  <td>{convert_date_USinFR($allFormation[key]['date_in'])}</td>
     		                  <td>{convert_date_USinFR($allFormation[key]['date_out'])}</td>

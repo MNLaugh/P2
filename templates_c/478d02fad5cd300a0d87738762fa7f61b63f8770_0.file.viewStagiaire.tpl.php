@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-25 16:32:30
+/* Smarty version 3.1.30, created on 2017-02-26 01:39:45
   from "C:\wamp\www\DISII\templates\page\stagiaire\viewStagiaire.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b1a38e78aa57_19452076',
+  'unifunc' => 'content_58b223d1709734_29198336',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b1a38e78aa57_19452076 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b223d1709734_29198336 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="row clearfix">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">

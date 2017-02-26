@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.30, created on 2017-02-25 16:32:36
+/* Smarty version 3.1.30, created on 2017-02-26 01:43:23
   from "C:\wamp\www\DISII\templates\left_bar.tpl" */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.30',
-  'unifunc' => 'content_58b1a394f27c58_99184545',
+  'unifunc' => 'content_58b224ab64bec3_28260705',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_58b1a394f27c58_99184545 (Smarty_Internal_Template $_smarty_tpl) {
+function content_58b224ab64bec3_28260705 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
     <section>
         <!-- Left Sidebar -->

@@ -38,6 +38,9 @@ $stagQuery = new Stagiaire($db);			//Initialisation de l'objet Stagiaire
 //FORMATION
 require_once('./classes/class.forma.php');	//Inclusion de la class formation
 $formaQuery = new Formations($db); 			//Initialisation de l'objet Formations
+//SEARCH
+require_once('./classes/class.search.php');	//Inclusion de la class formation
+$searchQuery = new Search($db); 			//Initialisation de l'objet Formations
 
 //Active le debugger si besoin
 //$tpl->debugging = false;
@@ -70,7 +73,7 @@ if($user->is_logged_in()){
 	$tpl->assign("user_login", $_SESSION['user_login']);
 	$tpl->assign("user_email", $_SESSION['user_email']);
 	$power = $_SESSION['user_power'];
-	$power = 1;
+	//$power = 1;
 	$tpl->assign("user_power", $power);
 	$tpl->assign("user_textuel_power", $user->textuel_power($power));
 	$user_img_default = DEFAULT_AVATAR;
@@ -86,11 +89,15 @@ if($user->is_logged_in()){
 
 	//Si le grade n'est pas stagiaire
 	if($power!=2){
+
 		/***************  -Contrôle de menu-  ***************\*/
 		//Transfert de la vue Menu HTML au template
 		$tpl->assign("left_menu", $menuQuery->html_menu($power));
 		//Initialisation de la page par requête GET
 		$page = (isset($_GET['p']) && in_array($_GET['p'], $allPageList)) ? $_GET['p'] : "accueil".$power;
+		if(isset($_POST['search'])){
+			$page = "search";
+		}
 		//Transfert de la vue file d'arianne au template
 		$tpl->assign("arianna", $menuQuery->html_arianna($page));
 		//Initialisation de la variable nom de page visible à droite dans le navbar et dans le titre de l'onglet.
@@ -102,6 +109,8 @@ if($user->is_logged_in()){
 		if($page == "accueil0"){
 			$pageLink = $page;
 		}elseif($page == "accueil1"){
+			$pageLink = $page;
+		}elseif($page == "search"){
 			$pageLink = $page;
 		}else{
 			//Et si il existe une lettre en majuscule dans la chaine
@@ -122,6 +131,11 @@ if($user->is_logged_in()){
 		$tpl->assign("page", "templates/page/".$pageLink);
 		//Switch des divers éléments du site
 		switch ($page) {
+			case 'search':
+				$searched = $_POST['search'];
+				$result = $searchQuery->searching($searched);
+				$tpl->assign("result", $result);
+			break;
 			//Case de formation
 			case 'formation':
 				require_once('ctrl/ctrl.formation.php'); 	//Inclusion du contrôleur de formation
@@ -131,68 +145,7 @@ if($user->is_logged_in()){
 				require_once('ctrl/ctrl.stagiaire.php');	//Inclusion du contrôleur de formation
 			break;
 			default:
-				$tpl->assign('nbStagiaire', $stagQuery->get_number_stagiaire());
-				$tpl->assign('nbFormation', $formaQuery->get_number_formation());
-
-				$listFormation = $formaQuery->get_arr_formation();
-				$allStag = $stagQuery->get_arr_stagiaire();
-				$allStagiaire = [];
-				foreach ($listFormation as $i => $form) {
-					$nbstag = 0;
-					foreach ($allStag as $stag){
-						if($stag['id_formation'] == $form['id_formation']){
-							$nbstag ++;
-						}
-					}
-					$listFormation[$i]['status'] = null;
-					$listFormation[$i]['nbstagiaire'] = $nbstag;
-					$inTimestamp = strtotime($form['date_in']);
-					$outTimestamp = strtotime($form['date_out']);
-					$inInterval = $nowTimestamp-$inTimestamp;
-					$outInterval = $nowTimestamp-$outTimestamp;
-					//les deux interval sont déjà passés
-					if($inInterval < 0 && $outInterval < 0){
-						//Assignation au tpl
-						$listFormation[$i]['status'] = "Formation à venir";
-					//les deux interval sont à venir
-					}elseif($inInterval > 0 && $outInterval > 0){
-						//Assignation au tpl
-						$listFormation[$i]['status'] = "Formation terminée";
-					//Sinon la formation est en cours
-					}else{
-						//calcul des jours passées
-						$daysPass = round((($inInterval/24)/60)/60);
-						//calcul des semaines passées
-						$daysWeekPass = round($daysPass/7)*2;
-						//recalcul des jour passer sans les weekend
-						$daysPass = $daysPass - $daysWeekPass;
-						//Calcul des jours restants
-						$daysFutur = round((($outInterval/24)/60)/60)*-1;
-						//Calcul des semaines restantes
-						$daysWeekFutur = round($daysFutur/7)*2;
-						//Recalcul des jours restants sans les weekend
-						$daysFutur = $daysFutur - $daysWeekFutur;
-						//Total de jours de formation
-						$dayTotal = $daysPass+$daysFutur;
-						//Pourcentage passé
-						$percent = ($daysPass*100)/$dayTotal;
-						//Envoi au template avec la fonction de création de la progress bar
-						$listFormation[$i]['status'] =  progress_bar($percent, $daysPass.' jours passés', $daysFutur.' jours restant');
-					}
-				}
-				
-				//Assigne le tableau des formation a la variable de vue "allFormation"
-				$tpl->assign("allFormation", $listFormation);
-
-				if($page == "accueil0"){
-					$userList = $user->get_user_list();
-					foreach ($userList as $id => $u) {
-						$userList[$id]['power'] = $user->textuel_power(intval($u['power']));
-						$userList[$id]['name'] = utf8_decode($u['name']);
-						$userList[$id]['first_name'] = utf8_decode($u['first_name']);
-					}
-					$tpl->assign("listUser", $userList);
-				}
+				require_once('ctrl/ctrl.accueil.php');
 			break;
 		}
 	//Sinon c'est un satgiaire

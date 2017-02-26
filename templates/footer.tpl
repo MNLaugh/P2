@@ -1,5 +1,7 @@
     <!-- Jquery Core Js -->
-    <script src="ressources/plugins/jquery/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
     <!-- Bootstrap Core Js -->
     <script src="ressources/plugins/bootstrap/js/bootstrap.js"></script>
     <!-- Bootstrap Notify Plugin Js -->
@@ -64,5 +66,8 @@
     <script src="ressources/js/pages/index.js"></script>
     <script src="ressources/js/pages/ui/notifications.js"></script>
     <script src="ressources/js/script.js"></script>
+
+  
+    <script src="./ressources/js/search.js"></script>
 </BODY>
 </HTML>

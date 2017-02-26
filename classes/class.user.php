@@ -116,6 +116,7 @@ class User extends Password{
 			//Création du mot de passe utilisateur à 8 caractères
 			$arrAddUser['password'] = $this->myEncrypt(PASSWORD_SCRYPT, $this->rand_string(8), PASSWORD_MODE);
 			//Préparation SQL
+			$stmt = $this->_db->query('SET NAMES utf8');
 			$stmt = $this->_db->prepare('INSERT INTO users (id_user, login, password, name, first_name, email, power) VALUES (:id_user, :login, :password, :name, :first_name, :email, :power)');
 			//Execution SQL avec les éléments à ajouter
 			$stmt->execute(array(
@@ -229,6 +230,7 @@ class User extends Password{
 	**/
 	public function get_user_by_id($id_user){
 		try {
+			$stmt = $this->_db->query('SET NAMES utf8');
 			$stmt = $this->_db->query('SELECT id_user, login, password, name, first_name, email, date_naissance, adresse_1, adresse_2, adresse_3, code_postal, ville, telephone, level_diplom, id_formation, id_image, full_profile, power FROM users WHERE id_user = '. $this->_db->quote($id_user, PDO::PARAM_STR));
 			$row = $stmt->fetch();
 			$row['password'] = $this->myDecrypt(PASSWORD_SCRYPT, $row['password'], PASSWORD_MODE);
